@@ -1480,4 +1480,8 @@ input[type="text"] {
     background: #000000;
   }
   
+  .spaced_left_word {
+    padding-left: 40px; 
+}
+
   
