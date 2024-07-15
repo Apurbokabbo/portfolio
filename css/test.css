@@ -1,10 +1,4 @@
-body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to right, #87CEFA, #E0FFFF);
-  color: #333;
-}
-
-.container {
+.about-container {
   width: 60%;
   margin: 50px auto;
   background: #ffffff;
@@ -15,10 +9,11 @@ body {
 
 .tab {
   overflow: hidden;
-  border-bottom: 1px solid #ccc;
+  /* border-bottom: 1px solid #ccc; */
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 .tab button {
@@ -29,15 +24,20 @@ body {
   padding: 14px 16px;
   transition: 0.3s;
   font-size: 17px;
+  border: 1px solid #d9d9d9;
 }
 
 .tab button:hover {
-  background-color: #ddd;
+  
+  border-color: var(--secondary-color); /* Use secondary color for border */
+  background-color: var(--secondary-color); /* Use secondary color for background */
+  color: #fff; /* Change text color to white */
 }
 
 .tab button.active {
-  background-color: #fff;
-  border-bottom: 3px solid #000;
+  background-color: var(--main-color);
+  border-bottom: 3px solid var(--secondary-color);
+  color: #fff;
 }
 
 .tabcontent {
@@ -70,7 +70,7 @@ body {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background: #2196F3;
+  background: var(--secondary-color);
   border: 2px solid #fff;
   position: absolute;
   left: 50%;
@@ -85,7 +85,7 @@ body {
 }
 
 .timeline-content h3 {
-  margin: 0 0 5px;
+  margin: 0 0 12px;
 }
 
 .timeline-content p {
@@ -95,8 +95,8 @@ body {
 .timeline::after {
   content: '';
   position: absolute;
-  width: 2px;
-  background-color: #2196F3;
+  width: 4px;
+  background-color:var(--secondary-color);
   top: 0;
   bottom: 0;
   left: 50%;

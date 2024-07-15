@@ -1,7 +1,7 @@
 :root {
-  --main-color: #003135;
+  --main-color: #034f55;
   --secondary-color: #007780;
-  /* color: var(--main-color); */
+  
 }
 
 
@@ -52,7 +52,7 @@ a {
   transition: 0.5s; }
   a:hover {
     text-decoration: underline;
-    color: #007780; }
+    color: var(--secondary-color); }
   a:focus, a:active {
     outline: none; }
 
@@ -347,7 +347,7 @@ header {
 #colorlib-progress,
 #colorlib-contact,
 #colorlib-about {
-  padding: 10em 0;
+  padding: 8em 0;
   clear: both;
   position: relative; }
   @media screen and (max-width: 768px) {
@@ -1000,12 +1000,12 @@ header {
     outline: none !important; }
 
 .btn-primary {
-  background: #CA82F8;
+  background: var(--secondary-color);
   color: #fff;
   border: 2px solid #CA82F8; }
   .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-    background: #d49af9 !important;
-    border-color: #d49af9 !important; }
+    background: var(--secondary-color) !important;
+    border-color: var(--main-color) !important; }
   .btn-primary.btn-outline {
     background: transparent;
     color: #4d4d4d;
