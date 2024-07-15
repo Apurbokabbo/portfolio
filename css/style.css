@@ -1,3 +1,10 @@
+:root {
+  --main-color: #003135;
+  --secondary-color: #007780;
+  /* color: var(--main-color); */
+}
+
+
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon/icomoon.eot?srf3rx");
@@ -11,6 +18,8 @@
 *	Edit this section
 *
 * ======================================================= */
+ 
+
 body {
   font-family: "Karla", Arial, sans-serif;
   line-height: 1.8;
@@ -37,13 +46,13 @@ body {
     overflow-y: hidden; }
 
 a {
-  color: #CA82F8;
+  color: #007780;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s; }
   a:hover {
     text-decoration: underline;
-    color: #CA82F8; }
+    color: #007780; }
   a:focus, a:active {
     outline: none; }
 
@@ -61,7 +70,7 @@ span {
   color: rgba(114, 114, 114, 0.8); }
 
 h1, h2, h3, h4, h5, h6 {
-  color: rgba(0, 0, 0, 0.8);
+  color: var(--main-color);
   font-family: "Playfair Display", Georgia, serif;
   margin: 0 0 30px 0; }
 
@@ -207,7 +216,7 @@ h1, h2, h3, h4, h5, h6 {
           outline: none;
           text-decoration: none; }
       #colorlib-main-nav ul li.active a {
-        color: #CA82F8; }
+        color: #007780; }
   #colorlib-main-nav .form-group {
     margin-bottom: 40px;
     position: relative;
