@@ -363,11 +363,11 @@ header {
 
 .rotate {
   position: absolute;
-  top: .4em;
+  top: 1em;
   left: -50px; }
   .rotate .heading {
     font-family: "Karla", Arial, sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     text-transform: uppercase;
     letter-spacing: 1em;
     -webkit-transform: rotate(90deg);
@@ -386,7 +386,7 @@ header {
       top: 8px;
       right: -40px;
       content: '';
-      background: #000;
+      background: var(--secondary-color);
       width: 40px;
       height: 1px; }
 
@@ -397,7 +397,7 @@ header {
     .about-desc h2 span {
       display: block;
       margin-bottom: 0;
-      color: #000;
+      color: var(--main-color);
       font-size: 50px;
       font-family: "Playfair Display", Georgia, serif; }
   .about-desc .desc {
@@ -409,7 +409,7 @@ header {
     left: 30px; }
     .about-desc .rotate .heading {
       font-family: "Karla", Arial, sans-serif;
-      font-size: 14px;
+      font-size: 16px;
       text-transform: uppercase;
       letter-spacing: 1em;
       -webkit-transform: rotate(90deg);
@@ -426,7 +426,7 @@ header {
         top: 8px;
         right: -40px;
         content: '';
-        background: #000;
+        background: var(--secondary-color);
         width: 40px;
         height: 1px; }
 
@@ -435,7 +435,8 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  font-size: 250px;
+  font-size: 120px;
+  margin-top: 16px;
   color: #f0f0f0;
   font-weight: 700; }
   @media screen and (max-width: 768px) {
