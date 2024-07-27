@@ -180,7 +180,7 @@ h6 {
   padding: 20px;
   height: 44px;
   width: 44px;
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(221, 15, 15, 0.05);
   line-height: 0;
   padding: 0 !important;
   visibility: hidden;
@@ -206,7 +206,7 @@ h6 {
   opacity: 1;
 }
 #colorlib-main-nav .colorlib-nav-toggle:hover {
-  background: black;
+  background: var(--secondary-color);
 }
 #colorlib-main-nav .colorlib-nav-toggle:hover i::before,
 #colorlib-main-nav .colorlib-nav-toggle:hover i::after {
