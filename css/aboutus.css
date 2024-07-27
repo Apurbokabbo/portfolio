@@ -1,111 +1,320 @@
 .about-container {
-    width: 60%;
-    margin: 50px auto;
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 60%;
+  margin: 50px auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tab {
+  overflow: hidden;
+  /* border-bottom: 1px solid #ccc; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab button {
+  background-color: #f1f1f1;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  border: 1px solid #d9d9d9;
+}
+
+.tab button:hover {
+  border-color: var(--secondary-color); /* Use secondary color for border */
+  background-color: var(
+    --secondary-color
+  ); /* Use secondary color for background */
+  color: #fff; /* Change text color to white */
+}
+
+.tab button.active {
+  background-color: var(--main-color);
+  border-bottom: 3px solid var(--secondary-color);
+  color: #fff;
+}
+
+.tabcontent {
+  padding: 20px 0;
+}
+
+.tabcontent .timeline {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.timeline-event {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 48px 0;
+  position: relative;
+}
+
+.timeline-date {
+  width: 30%;
+  text-align: right;
+  padding-right: 20px;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.timeline-point {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--secondary-color);
+  border: 2px solid #fff;
+  opacity: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-content {
+  width: 30%;
+  padding-left: 20px;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.timeline-content h3 {
+  margin: 0 0 12px;
+}
+
+.timeline-content p {
+  margin: 0;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  background-color: var(--secondary-color);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  opacity: 50%;
+  transform: translateX(-50%);
+}
+
+/* * {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Open Sans Condensed", sans-serif;
+} */
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* .container {
+  position: relative;
+  max-width: 1000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+} */
+
+.container .card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 100px 0;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .container .card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    max-width: 350px;
+    margin: 25px;
   }
-  
-  .tab {
-    overflow: hidden;
-    /* border-bottom: 1px solid #ccc; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+}
+
+.container .card:nth-child(odd) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .container .card:nth-child(odd) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
-  
-  .tab button {
-    background-color: #f1f1f1;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 17px;
-    border: 1px solid #d9d9d9;
+}
+
+.container .card:nth-child(even) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .container .card:nth-child(even) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
-  
-  .tab button:hover {
-    
-    border-color: var(--secondary-color); /* Use secondary color for border */
-    background-color: var(--secondary-color); /* Use secondary color for background */
-    color: #fff; /* Change text color to white */
+}
+
+.container .card:nth-child(even) .imgbox {
+  left: -25px;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .container .card:nth-child(even) .imgbox {
+    left: 0;
   }
-  
-  .tab button.active {
-    background-color: var(--main-color);
-    border-bottom: 3px solid var(--secondary-color);
-    color: #fff;
+}
+
+.container .card:nth-child(even) .contentbox {
+  right: -25px;
+  padding: 20px 100px 20px 60px;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .container .card:nth-child(even) .contentbox {
+    right: 0;
+    padding: 30px;
   }
-  
-  .tabcontent {
-    padding: 20px 0;
-    
+}
+
+.container .card .imgbox {
+  position: relative;
+  height: 400px;
+  width: 500px;
+  left: 25px;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .container .card .imgbox {
+    width: 100%;
+    height: 250px;
+    left: 0;
   }
-  
-  .tabcontent .timeline {
-    position: relative;
-    max-width: 100%;
-    margin: auto;
+}
+
+.container .card .imgbox img {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px; /* Optional: for rounded corners */
+}
+
+.container .card .contentbox {
+  position: relative;
+  right: 25px;
+  width: 600px;
+  height: 450px;
+  background: #007780;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 20px 60px 20px 100px;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .container .card .contentbox {
+    width: 100%;
+    height: auto;
+    right: 0;
+    padding: 30px;
     text-align: center;
   }
-  
-  .timeline-event {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 48px 0;
-    position: relative;
-  }
-  
-  .timeline-date {
-    width: 30%;
-    text-align: right;
-    padding-right: 20px;
-    font-weight: bold;
-    color: var(--secondary-color);
-    
-  }
-  
-  .timeline-point {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background: var(--secondary-color);
-    border: 2px solid #fff;
-    opacity: 50%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    
-  }
-  
-  .timeline-content {
-    width: 30%;
-    padding-left: 20px;
-    text-align: left;
-    margin-left: 20px;
-  }
-  
-  .timeline-content h3 {
-    margin: 0 0 12px;
-  }
-  
-  .timeline-content p {
-    margin: 0;
-  }
-  
-  .timeline::after {
-    content: '';
-    position: absolute;
-    width: 4px;
-    background-color:var(--secondary-color);
+}
+
+.container .card .contentbox::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  bottom: -50px;
+  left: 0;
+  right: 0;
+  background: #007780;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .container .card .contentbox::before {
     top: 0;
     bottom: 0;
-    left: 50%;
-    opacity: 50%;
-    transform: translateX(-50%);
   }
-  
+}
+
+.container .card .contentbox h2 {
+  font-size: 30px;
+  color: #fff;
+}
+
+.container .card .contentbox p {
+  margin-top: 10px;
+  color: #fff;
+}
+
+.container .card .contentbox a {
+  display: inline-block;
+  margin-top: 15px;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  border: 1px solid #fff;
+}
