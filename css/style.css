@@ -547,14 +547,14 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
 }
 
 .intro-heading {
-  margin-bottom: 3em;
+  margin-bottom: 2em;
 }
 .intro-heading h2 {
   font-size: 34px;
   font-weight: 400;
   line-height: 1.5;
-  margin-bottom: 1.5em;
-  color: #000;
+  /* margin-bottom: 1.5em; */
+  color: var(--main-color);
   position: relative;
 }
 .intro-heading span {
