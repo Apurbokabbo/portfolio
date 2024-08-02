@@ -1809,15 +1809,15 @@ input[type="text"] {
   top: 0;
 }
 
-.about_hover li:nth-child(1) a:before {
+/* .about_hover li:nth-child(1) a:before {
   background: #dd4b39;
-}
+} */
 
-.about_hover li:nth-child(2) a:before {
+.about_hover li:nth-child(1) a:before {
   background: #3b5999;
 }
 
-.about_hover li:nth-child(3) a:before {
+.about_hover li:nth-child(2) a:before {
   background: #000000;
 }
 
@@ -1827,4 +1827,40 @@ input[type="text"] {
 
 .tittle-bottom-padding {
   padding-bottom: 12em;
+}
+
+
+/* styles.css */
+
+.vertical-buttons {
+  position: fixed; /* Position the buttons fixed to the viewport */
+  right: 20px; /* Position the buttons 20px from the right */
+  top: 50%; /* Center the buttons vertically in the viewport */
+  transform: translateY(-50%); /* Offset the buttons to truly center them vertically */
+  z-index: 10; /* Ensure the buttons are on top of other elements */
+  display: flex; /* Use flexbox for the buttons */
+  flex-direction: column; /* Stack buttons vertically */
+  align-items: center; /* Center the buttons horizontally */
+}
+
+.cv-button {
+  background-color: var(--secondary-color); 
+  color: white; /* White text */
+  padding: 15px; /* Padding */
+  text-decoration: none; /* No underline */
+  border-radius: 50%; /* Make the button circular */
+  display: flex; /* Use flexbox for icon alignment */
+  align-items: center; /* Vertically center the icon */
+  justify-content: center; /* Horizontally center the icon */
+  margin-bottom: 10px; /* Space between buttons */
+  cursor: pointer; /* Pointer/hand icon on hover */
+  transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+.cv-button i {
+  font-size: 20px; /* Increase icon size */
+}
+
+.cv-button:hover {
+  background-color: #fdfdfd; /* Darker green on hover */
 }
