@@ -1844,23 +1844,26 @@ input[type="text"] {
 }
 
 .cv-button {
-  background-color: var(--secondary-color); 
-  color: white; /* White text */
-  padding: 15px; /* Padding */
+  background-color: #fafafa; 
+  color: rgb(0, 0, 0); /* White text */
+  padding: 16px; /* Padding */
   text-decoration: none; /* No underline */
-  border-radius: 50%; /* Make the button circular */
+  border-radius: 60%; /* Make the button circular */
   display: flex; /* Use flexbox for icon alignment */
   align-items: center; /* Vertically center the icon */
   justify-content: center; /* Horizontally center the icon */
   margin-bottom: 10px; /* Space between buttons */
   cursor: pointer; /* Pointer/hand icon on hover */
   transition: background-color 0.3s; /* Smooth transition on hover */
+  border: 3px solid gray;
 }
 
 .cv-button i {
-  font-size: 20px; /* Increase icon size */
+  font-size: 16px; /* Increase icon size */
 }
 
 .cv-button:hover {
-  background-color: #fdfdfd; /* Darker green on hover */
+  background-color: var(--secondary-color); 
+  border-color: black;
+  color : white;
 }
