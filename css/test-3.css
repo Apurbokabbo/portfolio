@@ -1,104 +1,340 @@
-body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #87CEFA, #E0FFFF);
-    color: #333;
+/* Medium Layout: 1280px. */
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {}
+
+/* Tablet Layout: 768px. */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    /*::::::::::::::::::::::::::::::::::::
+       Main Menu
+    ::::::::::::::::::::::::::::::::::::*/
+    .navbar.navbar-expand-lg.fixed-top {
+        position: static;
+        background-color: #000;
+    }
+    button.navbar-toggler {
+        color: #fff;
+    }
+
+    .navbar-nav {
+        background-color: #333;
+        margin-top: 30px;
+    }
+    .nav-item {
+        border-bottom: 1px solid;
+    }
+    nav .main-menu .navbar-nav .nav-item .nav-link {
+        padding: 15px 15px;
+    }
+    /*::::::::::::::::::::::::::::::::::::
+       Hero Area 
+    ::::::::::::::::::::::::::::::::::::*/
+    .hero-content h2 {
+        font-size: 70px;
+    }
+    /*::::::::::::::::::::::::::::::::::::
+       About Area
+    ::::::::::::::::::::::::::::::::::::*/
+    .about-content {
+        margin-top: 30px;
+    }
+
+    /*::::::::::::::::::::::::::::::::::::
+       Service Section
+    ::::::::::::::::::::::::::::::::::::*/
+    .service-area::before {
+        height: 100%;
+    }
+
+    /*::::::::::::::::::::::::::::::::::::
+       Frequently asked questions
+    ::::::::::::::::::::::::::::::::::::*/
+    .faq-content {
+        margin-top: 15px;
+    }
+    /*::::::::::::::::::::::::::::::::::::
+       Call to Action Area
+    ::::::::::::::::::::::::::::::::::::*/
+    .cta-button {
+        text-align: left;
+        margin-top: 15px;
+    }
 }
 
-.container {
-    width: 60%;
-    margin: 50px auto;
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* Mobile Layout: 320px. */
+
+@media only screen and (max-width: 767px) {
+    /*::::::::::::::::::::::::::::::::::::
+       Section Title
+    ::::::::::::::::::::::::::::::::::::*/
+    .section-title h2 {
+        font-size: 24px;
+    }
+
+    /*::::::::::::::::::::::::::::::::::::
+       Main Menu
+    ::::::::::::::::::::::::::::::::::::*/
+    .navbar.navbar-expand-lg.fixed-top {
+        position: static;
+        background-color: #000;
+    }
+    button.navbar-toggler {
+        color: #fff;
+    }
+
+    .navbar-nav {
+        background-color: #333;
+        margin-top: 30px;
+    }
+    .nav-item {
+        border-bottom: 1px solid;
+    }
+    nav .main-menu .navbar-nav .nav-item .nav-link {
+        padding: 15px 15px;
+    }
+    /*::::::::::::::::::::::::::::::::::::
+       Hero Area 
+    ::::::::::::::::::::::::::::::::::::*/
+    .hero-aria,
+    .hero-area-slids,
+    .single-slider {
+        height: 440px;
+    }
+    .hero-content h2 {
+        font-size: 30px;
+    }
+
+    .hero-content h3 {
+        font-size: 15px;
+        margin: 15px 0;
+    }
+
+    .hero-aria::after {
+        width: 80%;
+    }
+    .hero-content {
+        max-width: 70%;
+    }
+
+    /*::::::::::::::::::::::::::::::::::::
+       Featured Area
+    ::::::::::::::::::::::::::::::::::::*/
+    .single-featured-item-wrap h3 {
+        font-size: 20px;
+    }
+    .featured-icon {
+        font-size: 40px;
+    }
+    /*::::::::::::::::::::::::::::::::::::
+       Portfolio Section
+    ::::::::::::::::::::::::::::::::::::*/
+    .work-list ul li {
+        margin-bottom: 5px;
+    }
+    .portfolio-hover h4 {
+        font-size: 18px;
+    }
+
+    /*::::::::::::::::::::::::::::::::::::
+       About Area
+    ::::::::::::::::::::::::::::::::::::*/
+    .about-content {
+        margin-top: 30px;
+    }
+    .about-content h2 {
+        font-size: 24px;
+    }
+    .about-content h4 {
+        font-size: 16px;
+    }
+
+    /*::::::::::::::::::::::::::::::::::::
+       Service Section
+    ::::::::::::::::::::::::::::::::::::*/
+    .service-area::before {
+        height: 100%;
+
+    }
+
+    .single-service h2 {
+        font-size: 24px;
+    }
+
+    .service-icon {
+        font-size: 45px;
+    }
+
+    /*::::::::::::::::::::::::::::::::::::
+       Frequently asked questions
+    ::::::::::::::::::::::::::::::::::::*/
+    .faq-content {
+        margin-top: 15px;
+    }
+    .single-faq h4 {
+        padding-right: 60px;
+        font-size: 16px;
+    }
+
+
+    /*::::::::::::::::::::::::::::::::::::
+       Blog Section
+    ::::::::::::::::::::::::::::::::::::*/
+    h4.blog-title {
+        font-size: 16px;
+    }
+    /*::::::::::::::::::::::::::::::::::::
+       Call to Action Area
+    ::::::::::::::::::::::::::::::::::::*/
+    .cta-button {
+        text-align: left;
+        margin-top: 15px;
+    }
+
+
+
+    /*::::::::::::::::::::::::::::::::::::
+       Why choose Me Section
+    ::::::::::::::::::::::::::::::::::::*/
+    .single-why-me h4 {
+        font-size: 20px;
+    }
+    .why-me-right .why-me-icon,
+    .why-me-left .why-me-icon {
+        position: relative;
+        height: 100px;
+    }
+    .single-why-me.why-me-right,
+    .single-why-me {
+        padding: 0;
+        text-align: center;
+    }
+
+    /*::::::::::::::::::::::::::::::::::::
+       Team Section
+    ::::::::::::::::::::::::::::::::::::*/
+    .single-team {
+        max-width: 300px;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+    /*::::::::::::::::::::::::::::::::::::
+       Pricing Area
+    ::::::::::::::::::::::::::::::::::::*/
+    .single-price-box {
+        max-width: 300px;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+
+    /*::::::::::::::::::::::::::::::::::::
+       Contact Area 
+    ::::::::::::::::::::::::::::::::::::*/
+    .contact-form {
+        padding: 15px;
+    }
 }
 
-.tab {
-    overflow: hidden;
-    border-bottom: 1px solid #ccc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+/* Wide Mobile Layout: 480px. */
 
-.tab button {
-    background-color: #f1f1f1;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 17px;
-}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
 
-.tab button:hover {
-    background-color: #ddd;
-}
 
-.tab button.active {
-    background-color: #fff;
-    border-bottom: 3px solid #000;
-}
+    /*::::::::::::::::::::::::::::::::::::
+       Main Menu
+    ::::::::::::::::::::::::::::::::::::*/
+    .navbar.navbar-expand-lg.fixed-top {
+        position: static;
+        background-color: #000;
+    }
+    button.navbar-toggler {
+        color: #fff;
+    }
 
-.tabcontent {
-    padding: 20px 0;
-}
+    .navbar-nav {
+        background-color: #333;
+        margin-top: 30px;
+    }
+    .nav-item {
+        border-bottom: 1px solid;
+    }
+    nav .main-menu .navbar-nav .nav-item .nav-link {
+        padding: 15px 15px;
+    }
+    /*::::::::::::::::::::::::::::::::::::
+       Hero Area 
+    ::::::::::::::::::::::::::::::::::::*/
+    .hero-content h2 {
+        font-size: 50px;
+    }
 
-.tabcontent .timeline {
-    position: relative;
-    max-width: 100%;
-    margin: auto;
-    text-align: center;
-}
+    .hero-content h3 {
+        font-size: 20px;
+        margin: 15px 0;
+    }
 
-.timeline-event {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 48px 0;
-    position: relative;
-}
+    .hero-aria::after {
+        width: 70%;
+    }
+    .hero-content {
+        max-width: 65%;
+    }
+    /*::::::::::::::::::::::::::::::::::::
+       Portfolio Section
+    ::::::::::::::::::::::::::::::::::::*/
+    .work-list ul li {
+        margin-bottom: 5px;
+    }
 
-.timeline-date {
-    width: 30%;
-    text-align: right;
-    padding-right: 20px;
-    font-weight: bold;
-}
+    /*::::::::::::::::::::::::::::::::::::
+       About Area
+    ::::::::::::::::::::::::::::::::::::*/
+    .about-content {
+        margin-top: 30px;
+    }
 
-.timeline-point {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background: #2196F3;
-    border: 2px solid #fff;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
+    /*::::::::::::::::::::::::::::::::::::
+       Service Section
+    ::::::::::::::::::::::::::::::::::::*/
+    .service-area::before {
+        height: 100%;
+    }
 
-.timeline-content {
-    width: 30%;
-    padding-left: 20px;
-    text-align: left;
-    margin-left: 20px;
-}
+    /*::::::::::::::::::::::::::::::::::::
+       Frequently asked questions
+    ::::::::::::::::::::::::::::::::::::*/
+    .faq-content {
+        margin-top: 15px;
+    }
+    /*::::::::::::::::::::::::::::::::::::
+       Call to Action Area
+    ::::::::::::::::::::::::::::::::::::*/
+    .cta-button {
+        text-align: left;
+        margin-top: 15px;
+    }
 
-.timeline-content h3 {
-    margin: 0 0 5px;
-}
+    /*::::::::::::::::::::::::::::::::::::
+       Team Section
+    ::::::::::::::::::::::::::::::::::::*/
+    .single-team {
+        width: 300px;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+    /*::::::::::::::::::::::::::::::::::::
+       Pricing Area
+    ::::::::::::::::::::::::::::::::::::*/
+    .single-price-box {
+        width: 300px;
+        margin: auto;
+        margin-bottom: 30px;
+    }
 
-.timeline-content p {
-    margin: 0;
-}
-
-.timeline::after {
-    content: '';
-    position: absolute;
-    width: 2px;
-    background-color: #2196F3;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    /*::::::::::::::::::::::::::::::::::::
+       Contact Area 
+    ::::::::::::::::::::::::::::::::::::*/
+    .contact-form {
+        padding: 30px;
+    }
 }
