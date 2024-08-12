@@ -24,7 +24,7 @@
 
 body {
   font-family: "Karla", Arial, sans-serif;
-  line-height: 1.8;
+  /* line-height: 1.8; */
   font-size: 16px;
   font-weight: 400;
   background: #fafafa;
@@ -85,14 +85,13 @@ h1,
 h2,
 h3,
 h4,
-h6
- {
+h6 {
   color: var(--main-color);
   font-family: "Playfair Display", Georgia, serif;
   margin: 0 0 30px 0;
 }
 
-h5{
+h5 {
   color: var(--main-color);
   font-family: "Playfair Display", Georgia, serif;
   margin: 0 0 12px 0;
@@ -547,10 +546,10 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
 }
 
 .intro-heading {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 .intro-heading h2 {
-  font-size: 34px;
+  font-size: 30px;
   font-weight: 400;
   line-height: 1.5;
   /* margin-bottom: 1.5em; */
@@ -1680,6 +1679,8 @@ input[type="text"] {
   width: 40px;
   height: 40px;
   background-color: #fff;
+  line-height: 1.8;
+
   text-align: center;
   text-emphasis-position: center;
   /* line-height: px; */
@@ -1767,10 +1768,11 @@ input[type="text"] {
 .about_hover li a {
   width: 40px;
   height: 40px;
+
   background-color: #fff;
   text-align: center;
+  padding-top: 4px;
   text-emphasis-position: center;
-  /* line-height: px; */
   font-size: 18px;
   margin: 0 4px;
   display: block;
@@ -1797,6 +1799,7 @@ input[type="text"] {
   content: "";
   position: absolute;
   top: 100%;
+
   left: 0;
   width: 100%;
   height: 100%;
@@ -1829,14 +1832,15 @@ input[type="text"] {
   padding-bottom: 12em;
 }
 
-
 /* styles.css */
 
 .vertical-buttons {
   position: fixed; /* Position the buttons fixed to the viewport */
   right: 20px; /* Position the buttons 20px from the right */
   top: 50%; /* Center the buttons vertically in the viewport */
-  transform: translateY(-50%); /* Offset the buttons to truly center them vertically */
+  transform: translateY(
+    -50%
+  ); /* Offset the buttons to truly center them vertically */
   z-index: 10; /* Ensure the buttons are on top of other elements */
   display: flex; /* Use flexbox for the buttons */
   flex-direction: column; /* Stack buttons vertically */
@@ -1844,7 +1848,7 @@ input[type="text"] {
 }
 
 .cv-button {
-  background-color: #fafafa; 
+  background-color: #fafafa;
   color: rgb(0, 0, 0); /* White text */
   padding: 16px; /* Padding */
   text-decoration: none; /* No underline */
@@ -1863,7 +1867,7 @@ input[type="text"] {
 }
 
 .cv-button:hover {
-  background-color: var(--secondary-color); 
+  background-color: var(--secondary-color);
   border-color: black;
-  color : white;
+  color: white;
 }
