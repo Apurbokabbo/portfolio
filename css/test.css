@@ -1,22 +1,8 @@
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f5f0eb;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
 
-.container {
-  background-color: #f5f0eb;
-  width: 60%;
-  padding: 20px;
-}
 
 h1 {
   font-size: 2.5em;
-  color: #4a2c2a;
+  color: #007780;
   margin-bottom: 40px;
   text-align: center;
 }
@@ -26,7 +12,7 @@ h1 {
   align-items: center;
   margin-bottom: 30px;
   padding: 20px;
-  border: 1px solid #4a2c2a;
+  border: 1px solid #007780;
   border-radius: 5px;
 }
 
@@ -39,7 +25,7 @@ h1 {
 }
 
 .step-number {
-  background-color: #4a2c2a;
+  background-color: #007780;
   color: #fff;
   font-size: 1.5em;
   font-weight: bold;
@@ -55,12 +41,19 @@ h1 {
 
 .step-content h2 {
   font-size: 1.5em;
-  color: #4a2c2a;
+  color: #034f55;
   margin: 0;
+}
+
+.step-content-right h2 {
+  font-size: 1.5em;
+  color: #007780;
+  margin: 0;
+  text-align: end;
 }
 
 .step-content p {
   font-size: 1em;
-  color: #4a2c2a;
+  color: #007780;
   margin: 10px 0 0;
 }
