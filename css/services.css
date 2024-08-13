@@ -56,17 +56,11 @@ a:hover {
   text-decoration: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Source Sans Pro", sans-serif;
-  color: #000;
-  font-weight: 600;
-  line-height: 1.7;
-  margin: 0;
+.unique-h4 {
+  color: var(--main-color);
+  font-size: 20px;
+  font-family: "Playfair Display", Georgia, serif;
+  padding-bottom: 8px;
 }
 
 .d-table {
@@ -262,26 +256,6 @@ h6 {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
 }
 
-.about-content h2 span {
-  color: #ffc900;
-  font-size: 100%;
-}
-
-.about-content h4 {
-  font-weight: 400;
-  font-size: 22px;
-  margin-bottom: 15px;
-}
-
-.about-content p {
-  font-weight: 400;
-}
-
-.about-content h5 {
-  margin: 30px 0;
-  text-transform: uppercase;
-}
-
 .skillbar {
   position: relative;
   display: block;
@@ -442,7 +416,7 @@ h6 {
 
 .service-icon {
   font-size: 50px;
-  color: var(--);
+  color: #aaa;
 }
 
 /*::::::::::::::::::::::::::::::::::::
@@ -458,12 +432,12 @@ h6 {
 
 .d-table-cell {
   vertical-align: middle;
-  padding-top: 1em;
+  padding-top: 0.8em;
 }
 
 .single-why-me:hover .why-me-icon {
-  background-color: #000;
-  color: var(--main);
+  background-color: #007780;
+  color: #ffffff;
 }
 
 .why-me-right .why-me-icon,
@@ -473,13 +447,13 @@ h6 {
   font-size: 40px;
   width: 100px;
   height: 100%;
-  border: 1px solid #000;
+  /* border: 1px solid #007780; */
   text-align: center;
   line-height: 1;
   right: 0;
   bottom: 0;
   display: inline-block;
-  background-color: #007780;
+  background-color: #3babbd;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
