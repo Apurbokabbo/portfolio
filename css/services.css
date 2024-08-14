@@ -662,3 +662,62 @@ p.comment-date {
 .comment-content a:hover {
   background-color: #000;
 }
+
+
+h1 {
+  font-size: 2.5em;
+  color: #007780;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.process-step {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  /* border: 1px solid #007780; */
+  border-radius: 5px;
+}
+
+.left {
+  flex-direction: row;
+}
+
+.right {
+  flex-direction: row-reverse;
+}
+
+.step-number {
+  background-color: #007780;
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  margin: 0 20px;
+}
+
+.step-content h2 {
+  font-size: 1.5em;
+  color: #034f55;
+  margin: 4px;
+}
+
+.step-content-right h2 {
+  font-size: 1.5em;
+  color: #007780;
+  margin: 0;
+  text-align: end;
+}
+
+.step-content p {
+  font-size: 1em;
+  color: #007780;
+  margin: 10px 0 0;
+}
