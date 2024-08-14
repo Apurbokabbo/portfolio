@@ -1,103 +1,41 @@
+/* Scroll to Top Button CSS */
+.scroll-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: -15px;
+  z-index: 99999;
+  background-color: #dd4924;
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s;
+}
+
+.scroll-top i {
+  font-size: 24px;
+  color: #11e651;
+}
+
+.scroll-top:hover {
+  /* background-color: color-mix(in srgb,#361c72), transparent 20%); */
+  background-color: #361c72;
+  color: aqua;
+}
+
+.scroll-top.active {
+  visibility: visible;
+  opacity: 1;
+  bottom: 15px;
+}
+
+/* Sample content for testing */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
-
-.container {
-  width: 60%;
-  background-color: #fff;
+  height: 2000px;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.step {
-  display: flex;
-  align-items: center;
-  margin-bottom: 30px;
-  position: relative;
-  padding-left: 80px;
-}
-
-.step:last-child {
-  margin-bottom: 0;
-}
-
-.step-number {
-  font-size: 30px;
-  font-weight: bold;
-  color: #fff;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.step-1 .step-number { background-color: #f39c12; }
-.step-2 .step-number { background-color: #e74c3c; }
-.step-3 .step-number { background-color: #9b59b6; }
-.step-4 .step-number { background-color: #8e44ad; }
-
-.step-content {
-  flex: 1;
-  padding-left: 40px;
-  border-left: 4px solid #ddd;
-  position: relative;
-}
-
-.step-content:before {
-  content: '';
-  position: absolute;
-  left: -5px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 10px;
-  height: 10px;
-  background-color: #fff;
-  border: 3px solid #ddd;
-  border-radius: 50%;
-  z-index: 1;
-}
-
-.step-title {
-  font-size: 18px;
-  color: #333;
-  margin-bottom: 5px;
-}
-
-.step-text {
-  color: #666;
-  line-height: 1.5;
-}
-
-.icon {
-  width: 40px;
-  height: 40px;
-  margin-right: 20px;
-  border-radius: 50%;
-  background-color: #f4f4f4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.icon img {
-  width: 60%;
-  height: 60%;
-}
-
-.step-container {
-  display: flex;
-  align-items: center;
+  font-family: Arial, sans-serif;
 }

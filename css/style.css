@@ -1870,3 +1870,46 @@ input[type="text"] {
   border-color: black;
   color: white;
 }
+
+/* Scroll to Top Button CSS */
+/* Ensure the scroll-top button is positioned correctly */
+
+.scroll-top {
+  visibility: hidden;
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  background-color: var(   --secondary-color); /* Optional: Set a background color */
+  color: #ffffff; /* Optional: Set the icon color */
+  border-radius: 50%; /* Optional: Make it circular */
+  width: 50px; /* Set width */
+  height: 50px; /* Set height */
+  display: flex; /* Use flexbox for centering */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  box-shadow: 0 3px 5px rgba(255, 255, 255, 0.979); /* Optional: Add shadow */
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+#scroll-top i {
+  font-size: 24px; /* Adjust size as needed */
+  color: #ffffff;
+}
+
+.scroll-top:hover {
+  background-color: var(--main-color);
+  color: #ffffff;
+}
+
+.scroll-top.active {
+  visibility: visible;
+  opacity: 1;
+  bottom: 15px;
+}
+
+/* Sample content for testing */
+body {
+  height: 2000px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
