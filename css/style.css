@@ -1906,10 +1906,3 @@ input[type="text"] {
   opacity: 1;
   bottom: 15px;
 }
-
-/* Sample content for testing */
-body {
-  height: 2000px;
-  padding: 20px;
-  font-family: Arial, sans-serif;
-}
