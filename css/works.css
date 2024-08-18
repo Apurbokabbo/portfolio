@@ -1,0 +1,140 @@
+
+.work-list {
+    margin-bottom: 60px;
+  }
+  
+  .portfolio-area .mix {
+    display: none;
+  }
+  
+  .work-list ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .work-list ul li {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  
+  .work-list ul li.filter.active,
+  .work-list ul li:hover {
+    color: #000;
+    background-color: #ffc900;
+    border-color: #ffc900;
+  }
+  
+  .row.portfolio .col-lg-4 {
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+  
+  .single-portfolio {
+    height: 240px;
+    margin-bottom: 15px;
+    background-position: center;
+    background-size: cover;
+    background-color: #ddd;
+    padding: 15px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .single-portfolio:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    background-color: #000;
+    opacity: 0.5;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    z-index: -1;
+  }
+  
+  .single-portfolio:hover:after {
+    height: 100%;
+  }
+  
+  .portfolio-icon {
+    position: absolute;
+    top: 100%;
+    margin-top: -20px;
+    left: 50%;
+    margin-left: -20px;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    visibility: hidden;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+  }
+  
+  .single-portfolio:hover .portfolio-icon {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    visibility: visible;
+    top: 50%;
+  }
+  
+  .portfolio-icon a {
+    font-size: 15px;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border: 1px solid;
+    display: inline-block;
+    line-height: 40px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  
+  .portfolio-icon a:hover {
+    border-radius: 50%;
+  }
+  
+  .portfolio-hover h4 {
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  .portfolio-hover {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -60px;
+    padding: 5px;
+    z-index: 1;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    visibility: hidden;
+  }
+  
+  .portfolio-hover:after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: #000;
+    z-index: -1;
+  }
+  
+  .single-portfolio:hover .portfolio-hover {
+    bottom: 0;
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    visibility: visible;
+  }
