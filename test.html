@@ -4,247 +4,199 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recent Work Menu</title>
-    <link rel="stylesheet" href="css/aboutus.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/test.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
   </head>
   <body>
-    <div>
-      <div id="colorlib-services" style="padding-bottom: 8em">
-        <div class="container">
-          <div class="row text-center" style="padding-bottom: 12em">
-            <h2 class="bold" style="font-size: 100px">
-              Experience & Education
-            </h2>
+    <section
+      id="portfolio"
+      class="section-padding pb-85 portfolio-area bg-light"
+    >
+      <div class="container">
+        <!-- Section Title -->
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <div class="section-title text-center">
+              <h2>Recent Work</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
           </div>
-          <h2>Experience & Education</h2>
-
-          <div class="tab" style="margin-top: 20em">
-            <button class="tablinks active" onclick="openTab(event, 'All')">
-              All
-            </button>
-            <button class="tablinks" onclick="openTab(event, 'App_Project')">
-              App Project
-            </button>
-            <button class="tablinks" onclick="openTab(event, 'Web_Project')">
-              Web Project
-            </button>
-            <button
-              class="tablinks"
-              onclick="openTab(event, 'App_Web Automation_Project')"
+        </div>
+        <!-- //Section Title -->
+        <div class="row justify-content-center">
+          <!-- Work List Menu-->
+          <div class="col-lg-8">
+            <div class="work-list text-center">
+              <ul>
+                <li class="filter" class="active" data-filter="all">ALL</li>
+                <li class="filter" data-filter=".web">Web Design</li>
+                <li class="filter" data-filter=".graphic">Graphic</li>
+                <li class="filter" data-filter=".logo">Logo</li>
+                <li class="filter" data-filter=".wp">Wordpress</li>
+                <li class="filter" data-filter=".other">Other</li>
+              </ul>
+            </div>
+          </div>
+          <!-- // Work List Menu -->
+        </div>
+        <div class="row portfolio">
+          <!-- Single Portfolio -->
+          <div class="col-lg-4 col-md-6 mix wp graphic">
+            <div
+              class="single-portfolio"
+              style="background-image: url(images/portfolio/img-1.jpg)"
             >
-              App & Web Automation Project
-            </button>
-            <button
-              class="tablinks"
-              onclick="openTab(event, 'API_Performance_Project')"
+              <div class="portfolio-icon text-center">
+                <a data-lightbox="lightbox" href="images/portfolio/img-1.jpg"
+                  ><i class="fas fa-expand-arrows-alt"></i
+                ></a>
+              </div>
+              <div class="portfolio-hover">
+                <h4>Project <span>Name</span></h4>
+              </div>
+            </div>
+          </div>
+          <!-- // Single Portfolio -->
+          <!-- Single Portfolio -->
+          <div class="col-lg-4 col-md-6 mix logo web graphic other wp">
+            <div
+              class="single-portfolio"
+              style="background-image: url(images/portfolio/img-2.jpg)"
             >
-              API & Performance Project
-            </button>
-          </div>
-
-          <div id="All" class="tabcontent">
-            <div class="timeline">
-              <div class="timeline-event">
-                <div class="timeline-date">April 2023 to Present</div>
-                <div class="timeline-point"></div>
-                <div class="timeline-content">
-                  <h3>Newroz Technologies Limited</h3>
-                  <p>SQA Engineer</p>
-                  <p>Mirpur DOHS, Dhaka, Bangladesh</p>
-                </div>
+              <div class="portfolio-icon text-center">
+                <a data-lightbox="lightbox" href="images/portfolio/img-2.jpg"
+                  ><i class="fas fa-expand-arrows-alt"></i
+                ></a>
+              </div>
+              <div class="portfolio-hover">
+                <h4>Project <span>Name</span></h4>
               </div>
             </div>
           </div>
-          <div class="rotate">
-            <h2 class="heading">Experiences</h2>
-          </div>
-
-          <div id="App_Project" class="tabcontent" style="display: none">
-            <div class="timeline">
-              <div class="timeline-event">
-                <div class="timeline-date">App_Project</div>
-                <div class="timeline-point"></div>
-                <div class="timeline-content">
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="work-entry animate-box">
-                        <a href="work-single.html" class="work-img" style="background-image: url(images/work-1.jpg);">
-                          <div class="display-t">
-                            <div class="work-name">
-                              <h2>Pursuing Best</h2>
-                            </div>
-                          </div>
-                        </a>
-                        <div class="col-md-4 col-md-offset-4">
-                          <div class="desc">
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                            <p class="read"><a href="#">View details</a></p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="work-entry animate-box">
-                        <a href="work-single.html" class="work-img" style="background-image: url(images/work-2.jpg);">
-                          <div class="display-t">
-                            <div class="work-name">
-                              <h2>Coordinates</h2>
-                            </div>
-                          </div>
-                        </a>
-                        <div class="col-md-4 col-md-offset-4">
-                          <div class="desc">
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                            <p class="read"><a href="#">View Details</a></p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="work-entry animate-box">
-                        <a href="work-single.html" class="work-img" style="background-image: url(images/work-3.jpg);">
-                          <div class="display-t">
-                            <div class="work-name">
-                              <h2>Cristall</h2>
-                            </div>
-                          </div>
-                        </a>
-                        <div class="col-md-4 col-md-offset-4">
-                          <div class="desc">
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                            <p class="read"><a href="#">View details</a></p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="work-entry animate-box">
-                        <a href="work-single.html" class="work-img" style="background-image: url(images/work-4.jpg);">
-                          <div class="display-t">
-                            <div class="work-name">
-                              <h2>Black</h2>
-                            </div>
-                          </div>
-                        </a>
-                        <div class="col-md-4 col-md-offset-4">
-                          <div class="desc">
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                            <p class="read"><a href="#">View details</a></p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="work-entry animate-box">
-                        <a href="work-single.html" class="work-img" style="background-image: url(images/work-5.jpg);">
-                          <div class="display-t">
-                            <div class="work-name">
-                              <h2>Black</h2>
-                            </div>
-                          </div>
-                        </a>
-                        <div class="col-md-4 col-md-offset-4">
-                          <div class="desc">
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                            <p class="read"><a href="#">View details</a></p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="work-entry animate-box">
-                        <a href="work-single.html" class="work-img" style="background-image: url(images/work-6.jpg);">
-                          <div class="display-t">
-                            <div class="work-name">
-                              <h2>Black</h2>
-                            </div>
-                          </div>
-                        </a>
-                        <div class="col-md-4 col-md-offset-4">
-                          <div class="desc">
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                            <p class="read"><a href="#">View details</a></p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="work-entry animate-box">
-                        <a href="work-single.html" class="work-img" style="background-image: url(images/work-7.jpg);">
-                          <div class="display-t">
-                            <div class="work-name">
-                              <h2>Indice</h2>
-                            </div>
-                          </div>
-                        </a>
-                        <div class="col-md-4 col-md-offset-4">
-                          <div class="desc">
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                            <p class="read"><a href="#">View details</a></p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+          <!-- // Single Portfolio -->
+          <!-- Single Portfolio -->
+          <div class="col-lg-4 col-md-6 mix wp other">
+            <div
+              class="single-portfolio"
+              style="background-image: url(images/portfolio/img-3.jpg)"
+            >
+              <div class="portfolio-icon text-center">
+                <a data-lightbox="lightbox" href="images/portfolio/img-3.jpg"
+                  ><i class="fas fa-expand-arrows-alt"></i
+                ></a>
               </div>
-              <div class="rotate">
-                <h2 class="heading">Education</h2>
+              <div class="portfolio-hover">
+                <h4>Project <span>Name</span></h4>
               </div>
             </div>
           </div>
-          <div id="Web_Project" class="tabcontent" style="display: none">
-            <div class="timeline">
-              <div class="timeline-event">
-                <div class="timeline-date">web</div>
-                <div class="timeline-point"></div>
-                <div class="timeline-content">
-                  <h3>United International University</h3>
-                  <p>Bsc in CSE</p>
-                  <p>Dhaka, Bangladesh</p>
-                </div>
+          <!-- // Single Portfolio -->
+          <!-- Single Portfolio -->
+          <div class="col-lg-4 col-md-6 mix logo other graphic wp web">
+            <div
+              class="single-portfolio"
+              style="background-image: url(images/portfolio/img-4.jpg)"
+            >
+              <div class="portfolio-icon text-center">
+                <a data-lightbox="lightbox" href="images/portfolio/img-4.jpg"
+                  ><i class="fas fa-expand-arrows-alt"></i
+                ></a>
               </div>
-              <div class="rotate">
-                <h2 class="heading">Education</h2>
-              </div>
-            </div>
-          </div>
-          <div id="App_Web Automation_Project" class="tabcontent" style="display: none">
-            <div class="timeline">
-              <div class="timeline-event">
-                <div class="timeline-date">Automation_Project</div>
-                <div class="timeline-point"></div>
-                <div class="timeline-content">
-                  <h3>United International University</h3>
-                  <p>Bsc in CSE</p>
-                  <p>Dhaka, Bangladesh</p>
-                </div>
-              </div>
-              <div class="rotate">
-                <h2 class="heading">Education</h2>
+              <div class="portfolio-hover">
+                <h4>Project <span>Name</span></h4>
               </div>
             </div>
           </div>
-          <div id="API_Performance_Project" class="tabcontent" style="display: none">
-            <div class="timeline">
-              <div class="timeline-event">
-                <div class="timeline-date">API_Performance_Project</div>
-                <div class="timeline-point"></div>
-                <div class="timeline-content">
-                  <h3>United International University</h3>
-                  <p>Bsc in CSE</p>
-                  <p>Dhaka, Bangladesh</p>
-                </div>
+          <!-- // Single Portfolio -->
+          <!-- Single Portfolio -->
+          <div class="col-lg-4 col-md-6 mix logo other wp graphic web">
+            <div
+              class="single-portfolio"
+              style="background-image: url(images/portfolio/img-5.jpg)"
+            >
+              <div class="portfolio-icon text-center">
+                <a data-lightbox="lightbox" href="images/portfolio/img-5.jpg"
+                  ><i class="fas fa-expand-arrows-alt"></i
+                ></a>
               </div>
-              <div class="rotate">
-                <h2 class="heading">Education</h2>
+              <div class="portfolio-hover">
+                <h4>Project <span>Name</span></h4>
               </div>
             </div>
           </div>
-          
+          <!-- // Single Portfolio -->
+          <!-- Single Portfolio -->
+          <div class="col-lg-4 col-md-6 mix wp logo graphic web">
+            <div
+              class="single-portfolio"
+              style="background-image: url(images/portfolio/img-6.jpg)"
+            >
+              <div class="portfolio-icon text-center">
+                <a data-lightbox="lightbox" href="images/portfolio/img-6.jpg"
+                  ><i class="fas fa-expand-arrows-alt"></i
+                ></a>
+              </div>
+              <div class="portfolio-hover other">
+                <h4>Project <span>Name</span></h4>
+              </div>
+            </div>
+          </div>
+          <!-- // Single Portfolio -->
+          <!-- Single Portfolio -->
+          <div class="col-lg-4 col-md-6 mix web wp">
+            <div
+              class="single-portfolio"
+              style="background-image: url(images/portfolio/img-7.jpg)"
+            >
+              <div class="portfolio-icon text-center">
+                <a data-lightbox="lightbox" href="images/portfolio/img-7.jpg"
+                  ><i class="fas fa-expand-arrows-alt"></i
+                ></a>
+              </div>
+              <div class="portfolio-hover">
+                <h4>Project <span>Name</span></h4>
+              </div>
+            </div>
+          </div>
+          <!-- // Single Portfolio -->
+          <!-- Single Portfolio -->
+          <div class="col-lg-4 col-md-6 mix logo graphic wp web">
+            <div
+              class="single-portfolio"
+              style="background-image: url(images/portfolio/img-8.jpg)"
+            >
+              <div class="portfolio-icon text-center">
+                <a data-lightbox="lightbox" href="images/portfolio/img-8.jpg"
+                  ><i class="fas fa-expand-arrows-alt"></i
+                ></a>
+              </div>
+              <div class="portfolio-hover">
+                <h4>Project <span>Name</span></h4>
+              </div>
+            </div>
+          </div>
+          <!-- // Single Portfolio -->
+          <!-- Single Portfolio -->
+          <div class="col-lg-4 col-md-6 mix other logo web">
+            <div
+              class="single-portfolio"
+              style="background-image: url(images/portfolio/img-9.jpg)"
+            >
+              <div class="portfolio-icon text-center">
+                <a data-lightbox="lightbox" href="images/portfolio/img-9.jpg"
+                  ><i class="fas fa-expand-arrows-alt"></i
+                ></a>
+              </div>
+              <div class="portfolio-hover">
+                <h4>Project <span>Name</span></h4>
+              </div>
+            </div>
+          </div>
+          <!-- // Single Portfolio -->
         </div>
       </div>
-    </div>
+    </section>
+
     <!-- jQuery -->
     <script src="js/jquery.min.js"></script>
     <!-- jQuery Easing -->
