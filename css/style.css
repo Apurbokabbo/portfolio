@@ -402,10 +402,10 @@ header .colorlib-navbar-brand .colorlib-logo {
   font-weight: 400;
   letter-spacing: 5px;
   padding: 7px;
-  border: 1px solid #000;
+  border: 1px solid var(--secondary-color);
   display: block;
   text-align: center;
-  background: #000;
+  background: #ffffff;
 }
 header .colorlib-navbar-brand .colorlib-logo span {
   display: block;
