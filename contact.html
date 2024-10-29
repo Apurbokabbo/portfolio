@@ -49,8 +49,14 @@
 	<![endif]-->
 
 	<!-- Mail Service -->
-	<script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script> -->
+
 	<!-- Mail Service -->
+	<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+	<script>
+	  initializeEmailJS();
+	</script>
+	
 
 	
        
@@ -151,43 +157,43 @@
 									<!-- <li><span><i class="icon-globe3"></i></span><a href="#">www.yoursite.com</a></li> -->
 								</ul>
 							</div>
-							<!-- <div class="col-md-7 col-md-push-1 animate-box">
-								<div class="row">
+							<div class="col-md-7 col-md-push-1 animate-box">
+								<form id="contactForm">
+								  <div class="row">
 									<div class="col-md-12">
-										<div class="form-group">
-											<textarea name="message" class="form-control" id="message" cols="30" rows="7" placeholder="Message"></textarea>
-											
-										</div>
+									  <div class="form-group">
+										<textarea name="message" class="form-control" id="message" cols="30" rows="7" placeholder="Message"></textarea>
+									  </div>
 									</div>
 									<div class="col-md-6">
-										<div class="form-group">
-											<input type="text" class="form-control" name="name" id="name" placeholder="Name" required>
-											
-										</div>
+									  <div class="form-group">
+										<input type="text" class="form-control" name="name" id="name" placeholder="Name" required>
+									  </div>
 									</div>
 									<div class="col-md-6">
-										<div class="form-group">
-											<input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
-										</div>
+									  <div class="form-group">
+										<input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+									  </div>
 									</div>
 									<div class="col-md-12">
-										<div class="form-group">
-											<input type="submit" value="Send Message" class="btn btn-primary">
-										</div>
+									  <div class="form-group">
+										<input type="submit" value="Send Message" class="btn btn-primary">
+									  </div>
 									</div>
-								</div>
-								<p id="status-message" style="color: green;"></p>
-    							<p id="error-message" style="color: red;"></p>
-							</div> -->
+								  </div>
+								  <p id="status-message" style="color: green;"></p>
+								  <p id="error-message" style="color: red;"></p>
+								</form>
+							  </div>
 						</div>
-						<form id="contactForm">
+						<!-- <form id="contactForm">
 							<textarea name="message" id="message" placeholder="Message"></textarea>
 							<input type="text" name="name" id="name" placeholder="Name" required>
 							<input type="email" name="email" id="email" placeholder="Email" required>
 							<button type="submit">Send Message</button>
 						</form>
 						<p id="status-message" style="color: green;"></p>
-						<p id="error-message" style="color: red;"></p>
+						<p id="error-message" style="color: red;"></p> -->
 						
 					</div>
 				</div>
