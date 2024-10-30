@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const windowHeight = window.innerHeight;
     // Get the current scroll position
     const scrollPosition = window.scrollY;
-    console.log("scrollPosition", scrollPosition);
-    console.log("windowHeight", windowHeight);
+    // console.log("scrollPosition", scrollPosition);
+    // console.log("windowHeight", windowHeight);
 
     // Check if the user has scrolled more than 60% of the total page height
     // if (scrollPosition > (documentHeight - windowHeight) * 0.6) {
@@ -19,11 +19,11 @@ document.addEventListener("DOMContentLoaded", function () {
     //   scrollTopBtn.classList.remove("active");
     // }
     if (scrollPosition > 770) {
-      console.log("if");
+      // console.log("if");
 
       scrollTopBtn.classList.add("active");
     } else {
-      console.log("else");
+      // console.log("else");
       scrollTopBtn.classList.remove("active");
     }
   });
