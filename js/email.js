@@ -57,7 +57,28 @@
 
 function initializeEmailJS() {
   // Initialize EmailJS
-  emailjs.init("OPgp3Fon1tDaszFAx"); // public key used
+  function initializeEmailJS() {
+    const publicKey = "OPgp3Fon1tDaszFAx"; // replace with the actual key
+    emailjs.init(publicKey); 
+    console.log("EmailJS initialized with public key:", publicKey);
+  }
+  
+
+  // Add form submission handler
+  const form = document.getElementById("contactForm");
+  if (!form) {
+    console.error("Form with ID 'contactForm' not found.");
+    return;
+  }
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    // Form field logic...
+    console.log("Form submitted successfully.");
+  });
+}
+
 
   // Form submission handler
   document.getElementById("contactForm").addEventListener("submit", function (event) {
@@ -93,21 +114,36 @@ function initializeEmailJS() {
       reply_to: email,
     };
 
-    // Log the request parameters before sending
-    console.log("Sending email with the following parameters:", templateParams);
+    // // Log the request parameters before sending
+    // console.log("Sending email with the following parameters:", templateParams);
 
-    // Send email using EmailJS and log the response
-    emailjs.send("Yservice_4eaeg8k", "template_i19ur1d", templateParams).then(
-      function (response) {
-        console.log("Email sent successfully:", response);
-        statusMessage.textContent = "Message sent successfully!";
-        document.getElementById("contactForm").reset(); // Clear form fields
-      },
-      function (error) {
-        console.error("Failed to send email:", error);
-        errorMessage.textContent = "Failed to send message. Please try again.";
-      }
-    );
+    // // Send email using EmailJS and log the response
+    // emailjs.send("Yservice_4eaeg8k", "template_i19ur1d", templateParams).then(
+    //   function (response) {
+    //     console.log("Email sent successfully:", response);
+    //     statusMessage.textContent = "Message sent successfully!";
+    //     document.getElementById("contactForm").reset(); // Clear form fields
+    //   },
+    //   function (error) {
+    //     console.error("Failed to send email:", error);
+    //     errorMessage.textContent = "Failed to send message. Please try again.";
+    //   }
+    // );
+    emailjs.send("Yservice_4eaeg8k", "template_i19ur1d", templateParams)
+  .then(function(response) {
+    console.log("Email sent successfully:", response);
+    statusMessage.textContent = "Message sent successfully!";
+    document.getElementById("contactForm").reset(); // Clear form fields
+  })
+  .catch(function(error) {
+    console.error("Failed to send email:", error);
+    errorMessage.textContent = "Failed to send message. Please try again.";
   });
-}
+
+
+
+
+
+  });
+
 
