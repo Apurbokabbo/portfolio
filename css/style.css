@@ -1152,7 +1152,7 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
 #colorlib-testimony .owl-theme .owl-dots .owl-dot.active span,
 #colorlib-testimony .owl-theme .owl-dots .owl-dot:hover span {
   height: 3px;
-  background: #000;
+  background: var(--secondary-color);
 }
 
 #colorlib-testimony .owl-theme .owl-dots .owl-dot span {
@@ -1879,7 +1879,9 @@ input[type="text"] {
   position: fixed;
   bottom: 20px; /* Adjust as needed */
   right: 20px; /* Adjust as needed */
-  background-color: var(   --secondary-color); /* Optional: Set a background color */
+  background-color: var(
+    --secondary-color
+  ); /* Optional: Set a background color */
   color: #ffffff; /* Optional: Set the icon color */
   border-radius: 50%; /* Optional: Make it circular */
   width: 50px; /* Set width */
