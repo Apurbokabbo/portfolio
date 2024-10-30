@@ -1,58 +1,66 @@
 // Initialize EmailJS and set up form submission handling
 function initializeEmailJS() {
-  // Initialize EmailJS
-  emailjs.init("OPgp3Fon1tDaszFAx"); // public key used
+  console.log("email testing !!!");
+  // Initialize EmailJS with your public key
+  // emailjs.init("OPgp3Fon1tDaszFAx");
 
-  // Form submission handler
-  document
-    .getElementById("contactForm")
-    .addEventListener("submit", function (event) {
-      event.preventDefault(); // Prevent form from reloading the page
+  // emailjs.send("service_4eaeg8k", "template_i19ur1d", {
+  //   to_name: "kabbo",
+  //   from_name: "apurbo",
+  //   message: "hello body",
+  //   reply_to: "test@gmail.com",
+  // });
 
-      // Get form fields
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const message = document.getElementById("message").value.trim();
-      const statusMessage = document.getElementById("status-message");
-      const errorMessage = document.getElementById("error-message");
+  // // Form submission handler
+  // document
+  //   .getElementById("contactForm")
+  //   .addEventListener("submit", function (event) {
+  //     event.preventDefault(); // Prevent form from reloading the page
 
-      // Reset messages
-      statusMessage.textContent = "";
-      errorMessage.textContent = "";
+  //     // Get form fields
+  //     const name = document.getElementById("name").value.trim();
+  //     const email = document.getElementById("email").value.trim();
+  //     const message = document.getElementById("message").value.trim();
+  //     const statusMessage = document.getElementById("status-message");
+  //     const errorMessage = document.getElementById("error-message");
 
-      // Basic validation
-      if (!name || !email || !message) {
-        errorMessage.textContent = "All fields are required.";
-        return;
-      }
-      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailPattern.test(email)) {
-        errorMessage.textContent = "Invalid email format.";
-        return;
-      }
+  //     // Reset messages
+  //     statusMessage.textContent = "";
+  //     errorMessage.textContent = "";
 
-      // Prepare the parameters to send
-      const templateParams = {
-        to_name: name,
-        from_name: email,
-        message: message,
-        reply_to: email,
-      };
+  //     if (!name || !email || !message) {
+  //       errorMessage.textContent = "All fields are required.";
+  //       return;
+  //     }
+  //     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  //     if (!emailPattern.test(email)) {
+  //       errorMessage.textContent = "Invalid email format.";
+  //       return;
+  //     }
 
-      // Send email using EmailJS
-      console.log(
-        "Sending email with the following parameters:",
-        templateParams
-      );
-      emailjs.send("Yservice_4eaeg8k", "template_i19ur1d", templateParams).then(
-        function (response) {
-          statusMessage.textContent = "Message sent successfully!";
-          document.getElementById("message").reset(); // Clear form fields
-        },
-        function (error) {
-          errorMessage.textContent =
-            "Failed to send message. Please try again.";
-        }
-      );
-    });
+  //     // Prepare the parameters to send
+  //     const templateParams = {
+  //       to_name: name,
+  //       from_name: email,
+  //       message: message,
+  //       reply_to: email,
+  //     };
+
+  //     // Send email using EmailJS
+  //     console.log(
+  //       "Sending email with the following parameters:", templateParams
+  //     );
+
+  //     emailjs.send("service_4eaeg8k", "template_i19ur1d", templateParams).then(
+  //       function (response) {
+  //         statusMessage.textContent = "Message sent successfully!";
+  //         document.getElementById("contactForm").reset(); // Clear form fields
+  //       },
+  //       function (error) {
+  //         errorMessage.textContent =
+  //           "Failed to send message. Please try again.";
+  //         console.error("Error:", error);
+  //       }
+  //     );
+  //   });
 }
