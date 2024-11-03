@@ -52,7 +52,7 @@
 	<!-- <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script> -->
 
 	<!-- Mail Service -->
-	<!-- <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script> -->
+	<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 	</head>
 	<body>
 
@@ -149,32 +149,32 @@
 							</div>
 							<div class="col-md-7 col-md-push-1 animate-box">
 								<form id="contactForm">
-								  <div class="row">
-									<div class="col-md-12">
-									  <div class="form-group">
-										<textarea name="message" class="form-control" id="message" cols="30" rows="7" placeholder="Message"></textarea>
+									<div class="row">
+									  <div class="col-md-12">
+										<div class="form-group">
+										  <textarea name="message" class="form-control" id="message" cols="30" rows="7" placeholder="Message" required></textarea>
+										</div>
 									  </div>
-									</div>
-									<div class="col-md-6">
-									  <div class="form-group">
-										<input type="text" class="form-control" name="name" id="name" placeholder="Name" required>
+									  <div class="col-md-6">
+										<div class="form-group">
+										  <input type="text" class="form-control" name="name" id="name" placeholder="Name" required>
+										</div>
 									  </div>
-									</div>
-									<div class="col-md-6">
-									  <div class="form-group">
-										<input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+									  <div class="col-md-6">
+										<div class="form-group">
+										  <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+										</div>
 									  </div>
-									</div>
-									<div class="col-md-12">
-									  <div class="form-group">
-										<input type="submit" value="Send Message" class="btn btn-primary">
+									  <div class="col-md-12">
+										<div class="form-group">
+										  <button type="submit" class="btn btn-primary">Send Message</button>
+										</div>
 									  </div>
 									</div>
 									<p id="status-message" style="color: green;"></p>
 									<p id="error-message" style="color: red;"></p>
-								  </div>
+								  </form>
 								  
-								</form>
 							  </div>
 						</div>						
 					</div>
