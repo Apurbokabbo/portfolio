@@ -11,7 +11,7 @@ function initializeEmailJS(e) {
     .addEventListener("submit", function (e) {
       e.preventDefault();
 
-      // Get form fields
+       // Get form fields
       const name = document.getElementById("name").value.trim();
       const email = document.getElementById("email").value.trim();
       const message = document.getElementById("message").value.trim();
@@ -68,6 +68,8 @@ function initializeEmailJS(e) {
       //     }
       //   );
       // });
+
+
       emailjs.send("service_4eaeg8k", "template_i19ur1d", templateParams).then(
         function (response) {
           document.getElementById("status-message").textContent =
