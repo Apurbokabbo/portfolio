@@ -1,459 +1,487 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Apurbo Kabbo</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<meta name="author" content="" />
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Apurbo Kabbo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
 
-  <!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:card" content="" />
 
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="shortcut icon" href="favicon.ico">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="favicon.ico" />
 
-	<link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"> 
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<!-- Owl Carousel -->
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-	<!-- Magnific Popup -->
-	<link rel="stylesheet" href="css/magnific-popup.css">
+    <link
+      href="https://fonts.googleapis.com/css?family=Karla:400,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="css/animate.css" />
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="css/icomoon.css" />
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="css/magnific-popup.css" />
 
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/works.css">
-	<link rel="stylesheet" href="css/lightbox.min.css">
-	<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
-	<link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/works.css" />
+    <link rel="stylesheet" href="css/lightbox.min.css" />
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/test.css" />
 
+    <!--  -->
 
+    <link href="css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"/>
+   
+    <!-- Modernizr JS -->
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section light-background">
+      <div class="container">
+        <div
+          class="isotope-layout"
+          data-default-filter="*"
+          data-layout="masonry"
+          data-sort="original-order"
+        >
+          <ul
+            class="portfolio-filters isotope-filters"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">App</li>
+            <li data-filter=".filter-product">Product</li>
+            <li data-filter=".filter-branding">Branding</li>
+            <li data-filter=".filter-books">Books</li>
+          </ul>
+          <!-- End Portfolio Filters -->
 
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+          <div
+            class="row gy-4 isotope-container"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div
+              class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
+            >
+              <div class="portfolio-content h-100">
+                <img
+                  src="images/portfolio/dizli_icon.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>App 1</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a
+                    href="images/portfolio/dizli_icon.jpg"
+                    title="App 1"
+                    data-gallery="portfolio-gallery-app"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <a
+                    href="portfolio-details.html"
+                    title="More Details"
+                    class="details-link"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Portfolio Item -->
 
-	</head>
-	<body>
-		
-	<button id="scroll-top" class="scroll-top">Top</button>
-	<nav id="colorlib-main-nav" role="navigation">
-		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
-		<div class="js-fullheight colorlib-table">
-			<div class="colorlib-table-cell js-fullheight">
-				<div class="row">
-					<!-- <div class="col-md-12">
-						<div class="form-group">
-							<input type="text" class="form-control" id="search" placeholder="Enter any key to search...">
-							<button type="submit" class="btn btn-primary"><i class="icon-search3"></i></button>
-						</div>
-					</div> -->
-				</div>
-				<div class="row">
-					<div class="col-md-12">
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="services.html">Services</a></li>
-							<li class="active"><a href="work.html">Work</a></li>
-							<!-- <li><a href="blog.html">Blog</a></li> -->
-							<li><a href="about.html">About</a></li>
-							<li><a href="contact.html">Contact</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12 ">
-						<h2 class="head-title">Works </h2>
-						<a href="images/work-1.jpg" class="gallery image-popup-link text-center" style="background-image: url(images/work-1.jpg);">
-							<span><i class="icon-search3"></i></span>
-						</a>
-						<a href="images/work-2.jpg" class="gallery image-popup-link text-center" style="background-image: url(images/work-2.jpg);">
-							<span><i class="icon-search3"></i></span>
-						</a>
-						<a href="images/work-3.jpg" class="gallery image-popup-link text-center" style="background-image: url(images/work-3.jpg);">
-							<span><i class="icon-search3"></i></span>
-						</a>
-						<a href="images/work-4.jpg" class="gallery image-popup-link text-center" style="background-image: url(images/work-4.jpg);">
-							<span><i class="icon-search3"></i></span>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</nav>
-	
-	<div id="colorlib-page">
-		<header>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="colorlib-navbar-brand">
-							<a class="colorlib-logo" href="index.html"><span>No</span><span>ah</span></a>
-						</div>
-						<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
-					</div>
-				</div>
-			</div>
-		</header>
-	
-		
+            <div
+              class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
+            >
+              <div class="portfolio-content h-100">
+                <img
+                  src="images/img/portfolio/app-2.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Product 1</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a
+                    href="assets/img/portfolio/product-1.jpg"
+                    title="Product 1"
+                    data-gallery="portfolio-gallery-product"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <a
+                    href="portfolio-details.html"
+                    title="More Details"
+                    class="details-link"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Portfolio Item -->
 
-		<div id="colorlib-work">
-			<div class="container">
-				<div class="row text-center tittle-bottom-padding">
-					<h2 class="bold">Works</h2>
-				</div>
-				<div class="row">
-					<div class="col-md-12 col-md-offset-0 text-center animate-box intro-heading">
-						<span>Portfolio</span>
-						<h2>Done Projects</h2>
-					</div>
-				</div>
-				<div class="col-md-12">
-					<div class="rotate" style="margin-top: 20em;">
-						<h2 class="heading">Portfolio</h2>
-					</div>
-				</div>
+            <div
+              class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
+            >
+              <div class="portfolio-content h-100">
+                <img
+                  src="images/img/portfolio/app-3.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Branding 1</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a
+                    href="images/img/portfolio/branding-1.jpg"
+                    title="Branding 1"
+                    data-gallery="portfolio-gallery-branding"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <a
+                    href="portfolio-details.html"
+                    title="More Details"
+                    class="details-link"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Portfolio Item -->
 
-				<div id="colorlib-services" >
-					<div class="container services animate-box" >
-					 
-					  <div class="tab" >
-						<button class="tablinks active" onclick="openTab(event, 'All')">
-						  All
-						</button>
-						<button class="tablinks" onclick="openTab(event, 'App_Project')">
-						  App Project
-						</button>
-						<button class="tablinks" onclick="openTab(event, 'Web_Project')">
-						  Web Project
-						</button>
-						<button
-						  class="tablinks"
-						  onclick="openTab(event, 'App_Web Automation_Project')"
-						>
-						  App & Web Automation Project
-						</button>
-						<button
-						  class="tablinks"
-						  onclick="openTab(event, 'API_Performance_Project')"
-						>
-						  API & Performance Project
-						</button>
-					  </div>
-			
-					  <div id="All" class="tabcontent">
-						<div  id="colorlib-services" >
-							<div class="container">
-								<div class="row">
-								</div>
-								<div class="row portfolio">
-								  <!-- Single Portfolio -->
-								  <div class="col-lg-4 col-md-6 mix wp graphic">
-									<div
-									  class="single-portfolio"
-									  style="background-image: url(images/portfolio/img-1.jpg)"
-									>
-									  <div class="portfolio-icon text-center">
-										<a data-lightbox="lightbox" href="images/portfolio/img-1.jpg"
-										
-										  ><i class="fas fa-expand-arrows-alt"></i>										
-									</a>
-									  </div>
-									  <div class="portfolio-hover">
-										<h4>Project <span>Name</span></h4>
-									  </div>
-									</div>
-								  </div>
-								  <!-- // Single Portfolio -->
-								  <!-- Single Portfolio -->
-								  <div class="col-lg-4 col-md-6 mix logo web graphic other wp">
-									<div
-									  class="single-portfolio"
-									  style="background-image: url(images/portfolio/img-2.jpg)"
-									>
-									  <div class="portfolio-icon text-center">
-										<a data-lightbox="lightbox" href="images/portfolio/img-2.jpg"
-										  ><i class="fas fa-expand-arrows-alt"></i
-										></a>
-									  </div>
-									  <div class="portfolio-hover">
-										<h4>Project <span>Name</span></h4>
-									  </div>
-									</div>
-								  </div>
-								  <!-- // Single Portfolio -->
-								  <!-- Single Portfolio -->
-								  <div class="col-lg-4 col-md-6 mix wp other">
-									<div
-									  class="single-portfolio"
-									  style="background-image: url(images/portfolio/img-3.jpg)"
-									>
-									  <div class="portfolio-icon text-center">
-										<a data-lightbox="lightbox" href="images/portfolio/img-3.jpg"
-										  ><i class="fas fa-expand-arrows-alt"></i
-										></a>
-									  </div>
-									  <div class="portfolio-hover">
-										<h4>Project <span>Name</span></h4>
-									  </div>
-									</div>
-								  </div>
-								  <!-- // Single Portfolio -->
-								  <!-- Single Portfolio -->
-								  <div class="col-lg-4 col-md-6 mix logo other graphic wp web">
-									<div
-									  class="single-portfolio"
-									  style="background-image: url(images/portfolio/img-4.jpg)"
-									>
-									  <div class="portfolio-icon text-center">
-										<a data-lightbox="lightbox" href="images/portfolio/img-4.jpg"
-										  ><i class="fas fa-expand-arrows-alt"></i
-										></a>
-									  </div>
-									  <div class="portfolio-hover">
-										<h4>Project <span>Name</span></h4>
-									  </div>
-									</div>
-								  </div>
-								  <!-- // Single Portfolio -->
-								  <!-- Single Portfolio -->
-								  <div class="col-lg-4 col-md-6 mix logo other wp graphic web">
-									<div
-									  class="single-portfolio"
-									  style="background-image: url(images/portfolio/img-5.jpg)"
-									>
-									  <div class="portfolio-icon text-center">
-										<a data-lightbox="lightbox" href="images/portfolio/img-5.jpg"
-										  ><i class="fas fa-expand-arrows-alt"></i
-										></a>
-									  </div>
-									  <div class="portfolio-hover">
-										<h4>Project <span>Name</span></h4>
-									  </div>
-									</div>
-								  </div>
-								  <!-- // Single Portfolio -->
-								  <!-- Single Portfolio -->
-								  <div class="col-lg-4 col-md-6 mix wp logo graphic web">
-									<div
-									  class="single-portfolio"
-									  style="background-image: url(images/portfolio/img-6.jpg)"
-									>
-									  <div class="portfolio-icon text-center">
-										<a data-lightbox="lightbox" href="images/portfolio/img-6.jpg"
-										  ><i class="fas fa-expand-arrows-alt"></i
-										></a>
-									  </div>
-									  <div class="portfolio-hover other">
-										<h4>Project <span>Name</span></h4>
-									  </div>
-									</div>
-								  </div>
-								  <!-- // Single Portfolio -->
-								  <!-- Single Portfolio -->
-								  <div class="col-lg-4 col-md-6 mix web wp">
-									<div
-									  class="single-portfolio"
-									  style="background-image: url(images/portfolio/img-7.jpg)"
-									>
-									  <div class="portfolio-icon text-center">
-										<a data-lightbox="lightbox" href="images/portfolio/img-7.jpg"
-										  ><i class="fas fa-expand-arrows-alt"></i
-										></a>
-									  </div>
-									  <div class="portfolio-hover">
-										<h4>Project <span>Name</span></h4>
-									  </div>
-									</div>
-								  </div>
-								  <!-- // Single Portfolio -->
-								  <!-- Single Portfolio -->
-								  <div class="col-lg-4 col-md-6 mix logo graphic wp web">
-									<div
-									  class="single-portfolio"
-									  style="background-image: url(images/portfolio/img-8.jpg)"
-									>
-									  <div class="portfolio-icon text-center">
-										<a data-lightbox="lightbox" href="images/portfolio/img-8.jpg"
-										  ><i class="fas fa-expand-arrows-alt"></i
-										></a>
-									  </div>
-									  <div class="portfolio-hover">
-										<h4>Project <span>Name</span></h4>
-									  </div>
-									</div>
-								  </div>
-								  <!-- // Single Portfolio -->
-								  <!-- Single Portfolio -->
-								  <div class="col-lg-4 col-md-6 mix other logo web">
-									<div
-									  class="single-portfolio"
-									  style="background-image: url(images/portfolio/img-9.jpg)"
-									>
-									  <div class="portfolio-icon text-center">
-										<a data-lightbox="lightbox" href="images/portfolio/img-9.jpg"
-										  ><i class="fas fa-expand-arrows-alt"></i
-										></a>
-									  </div>
-									  <div class="portfolio-hover">
-										<h4>Project <span>Name</span></h4>
-									  </div>
-									</div>
-								  </div>
-								  <!-- // Single Portfolio -->
-								</div>
-							  </div>
-									
-								</div>
+            <div
+              class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books"
+            >
+              <div class="portfolio-content h-100">
+                <img
+                  src="images/img/portfolio/product-1.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Books 1</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a
+                    href="assets/img/portfolio/books-1.jpg"
+                    title="Branding 1"
+                    data-gallery="portfolio-gallery-book"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <a
+                    href="portfolio-details.html"
+                    title="More Details"
+                    class="details-link"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Portfolio Item -->
 
-							</div>
+            <div
+              class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
+            >
+              <div class="portfolio-content h-100">
+                <img
+                  src="images/img/portfolio/branding-3.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>App 2</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a
+                    href="assets/img/portfolio/app-2.jpg"
+                    title="App 2"
+                    data-gallery="portfolio-gallery-app"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <a
+                    href="portfolio-details.html"
+                    title="More Details"
+                    class="details-link"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Portfolio Item -->
 
-						</div>
-					  </div>
-					 
-			
-					  <div id="App_Project" class="tabcontent" style="display: none">
-						<!-- App project -->
-						 app project
-					  </div>
-					  <div id="Web_Project" class="tabcontent" style="display: none">
-						<!-- Web project-->
-						 Web Project
-					  </div>
-					  <div id="App_Web Automation_Project" class="tabcontent" style="display: none">
-						<!-- App and Web Automation -->
-						App and Web Automation
-					  </div>
-					  <div id="API_Performance_Project" class="tabcontent" style="display: none">
-						<!-- API & Performance Project -->
-						API & Performance Project
-					  </div>
-					  
-					</div>
-				  </div>
-				
-			</div>
-		</div>
-		
+            <div
+              class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
+            >
+              <div class="portfolio-content h-100">
+                <img
+                  src="images/img/portfolio/branding-2.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Product 2</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a
+                    href="assets/img/portfolio/product-2.jpg"
+                    title="Product 2"
+                    data-gallery="portfolio-gallery-product"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <a
+                    href="portfolio-details.html"
+                    title="More Details"
+                    class="details-link"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Portfolio Item -->
 
-		<footer>
-			<div id="footer">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-4 col-pb-sm">
-							<div class="row">
-								<div class="col-md-10">
-									<!-- <h2> <img src="images/logo_1.png" alt="Icon" style="height: 140px; margin-right: 12px; padding: 0; display: inline-block;"></h2> -->
-									<!-- <h2>About Me</h2> -->
-									<h2>A M Kabbo Hossain</h2>
-                        			<p>Dedicated SQA Engineer with a passion for ensuring software quality and reliability. Experienced in both manual and automated testing, with a strong focus on delivering bug-free and efficient software solutions.</p>
-									
-								</div>
-							</div>
-						</div>
-						<div class="col-md-offset-4 col-md-4 col-pb-sm">
-							<h2>Want to discuss SQA processes?</h2>
-							<h3>Feel free to contact!</h3>
-							
-								<div class = "social_hover">
-									<ul >
-									<li>
-										<a href="mailto:apurbokabbo1999@gmail.com" target="_blank"><i class="fab fa-google-plus-g icon"></i></a></li>
-									</li>
-									<li>
-									  
-									  <a href="https://www.facebook.com/apurbokabbo1999?mibextid=LQQJ4d" target="_blank"><i class="fab fa-facebook-f icon"></i>  </a>
-									</li>
-									<li>
-									  <a href="https://www.linkedin.com/in/apurbokabbo/" target="_blank"><i class="fab fa-linkedin-in icon"></i></a></li>
-									<li>
-										<a href="https://x.com/apurbokabbo/" target="_blank"><i class="fab fa-twitter icon"></i></a>
-									</li>
-									<li>
-										<a href="https://www.instagram.com/apurbokabbo/?igsh=MWZic3V0ZHMwZWtxdA%3D%3D&utm_source=qr" target="_blank"><i class="fab fa-instagram icon"></i></a>
-									</li>
-									<li>
-										<a href="https://wa.me/+8801837184946" target="_blank"><i class="fab fa-whatsapp icon"></i></a>
-										
-									</li>
+            <div
+              class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
+            >
+              <div class="portfolio-content h-100">
+                <img
+                  src="images/img/portfolio/books-2.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Branding 2</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a
+                    href="assets/img/portfolio/branding-2.jpg"
+                    title="Branding 2"
+                    data-gallery="portfolio-gallery-branding"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <a
+                    href="portfolio-details.html"
+                    title="More Details"
+                    class="details-link"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Portfolio Item -->
 
-									<li>
-										<a href="https://www.youtube.com/channel/UCh1tRpshl0cq8vYqp5InaYQ" target="_blank"><i class="fab fa-youtube icon"></i></a>
-										
-									</li>
-									<li>
-										<a href="https://t.me/apurbokabbo" target="_blank"><i class="fab fa-telegram-plane icon"></i></a>
-										
-									</li>
+            <div
+              class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books"
+            >
+              <div class="portfolio-content h-100">
+                <img
+                  src="images/img/portfolio/books-1.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Books 2</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a
+                    href="assets/img/portfolio/books-2.jpg"
+                    title="Branding 2"
+                    data-gallery="portfolio-gallery-book"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <a
+                    href="portfolio-details.html"
+                    title="More Details"
+                    class="details-link"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Portfolio Item -->
 
+            <div
+              class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
+            >
+              <div class="portfolio-content h-100">
+                <img
+                  src="images/img/portfolio/branding-1.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>App 3</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a
+                    href="assets/img/portfolio/app-3.jpg"
+                    title="App 3"
+                    data-gallery="portfolio-gallery-app"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <a
+                    href="portfolio-details.html"
+                    title="More Details"
+                    class="details-link"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Portfolio Item -->
 
-								  </ul>		
-								</div>	
+            <div
+              class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
+            >
+              <div class="portfolio-content h-100">
+                <img
+                  src="images/img/portfolio/app-1.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Product 3</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a
+                    href="assets/img/portfolio/product-3.jpg"
+                    title="Product 3"
+                    data-gallery="portfolio-gallery-product"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <a
+                    href="portfolio-details.html"
+                    title="More Details"
+                    class="details-link"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Portfolio Item -->
 
-							
-							
-							
-						</div>
-						
-					</div>
-					
-					<div class="row">
-						<div class="col-md-12 text-center">
-							<p>
-								&copy;<script>document.write(new Date().getFullYear());</script> Apurbokabbo. All rights reserved.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-	
-	</div>
+            <div
+              class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
+            >
+              <div class="portfolio-content h-100">
+                <img
+                  src="images/img/portfolio/books-3.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Branding 3</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a
+                    href="assets/img/portfolio/branding-3.jpg"
+                    title="Branding 2"
+                    data-gallery="portfolio-gallery-branding"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <a
+                    href="portfolio-details.html"
+                    title="More Details"
+                    class="details-link"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Portfolio Item -->
 
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<script src="js/jquery-3.3.1.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<!-- <script src="js/bootstrap.min.js"></script> -->
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<script src="js/lightbox.min.js"></script>
-	<!-- Owl Carousel -->
-	<script src="js/owl.carousel.min.js"></script>
-	<!-- Magnific Popup -->
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/magnific-popup-options.js"></script>
+            <div
+              class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books"
+            >
+              <div class="portfolio-content h-100">
+                <img
+                  src="images/img/portfolio/app-3.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Books 3</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a
+                    href="assets/img/portfolio/books-3.jpg"
+                    title="Branding 3"
+                    data-gallery="portfolio-gallery-book"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <a
+                    href="portfolio-details.html"
+                    title="More Details"
+                    class="details-link"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Portfolio Item -->
+          </div>
+          <!-- End Portfolio Container -->
+        </div>
+      </div>
+    </section>
+    <!-- /Portfolio Section -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- jQuery Easing -->
+    <script src="js/jquery.easing.1.3.js"></script>
+    <!-- Bootstrap -->
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <!-- Waypoints -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
+    <!-- Owl Carousel -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/magnific-popup-options.js"></script>
     <script src="js/typed.js"></script>
-	<!-- Main JS (Do not remove) -->
-	<script src="js/main.js"></script>
-	<script src="js/topbutton.js"></script>
-	<script src="js/aboutus.js"></script>
-	<script src="js/jquery.mixitup.js"></script>
-    
-
-	</body>
+    <!-- Main JS (Do not remove) -->
+    <script src="js/main.js"></script>
+    <script src="js/topbutton.js"></script>
+    <script src="js/aboutus.js"></script>
+    <script src="js/jquery.mixitup.js"></script>
+  </body>
 </html>
-
