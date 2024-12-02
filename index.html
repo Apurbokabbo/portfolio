@@ -450,31 +450,28 @@
 					  <div id="colorlib-services" >
 						<div class="container services animate-box" >
 						 
-						  <div class="tab" >
-							<button class="tablinks active" onclick="openTab(event, 'All')">
-							  All
-							</button>
-							<button class="tablinks" onclick="openTab(event, 'App_Project')">
-							  App Project
-							</button>
-							<button class="tablinks" onclick="openTab(event, 'Web_Project')">
-							  Web Project
-							</button>
-							<button
-							  class="tablinks"
-							  onclick="openTab(event, 'App_Web Automation_Project')"
-							>
-							  App & Web Automation Project
-							</button>
-							<button
-							  class="tablinks"
-							  onclick="openTab(event, 'API_Performance_Project')"
-							>
-							  API & Performance Project
-							</button>
-						  </div>
+							<div class="tab-wrapper">
+								<select class="tab-dropdown" onchange="openTab(event, this.value)">
+								  <option value="All">All</option>
+								  <option value="App_Project">App Project</option>
+								  <option value="Web_Project">Web Project</option>
+								  <option value="App_Web Automation_Project">App & Web Automation Project</option>
+								  <option value="API_Performance_Project">API & Performance Project</option>
+								</select>
+								<div class="tab">
+								  <button class="tablinks active" onclick="openTab(event, 'All')">All</button>
+								  <button class="tablinks" onclick="openTab(event, 'App_Project')">App Project</button>
+								  <button class="tablinks" onclick="openTab(event, 'Web_Project')">Web Project</button>
+								  <button class="tablinks" onclick="openTab(event, 'App_Web Automation_Project')">
+									App & Web Automation Project
+								  </button>
+								  <button class="tablinks" onclick="openTab(event, 'API_Performance_Project')">
+									API & Performance Project
+								  </button>
+								</div>
+							  </div>
 				
-						  <div id="All" class="tabcontent">
+							  <div id="All" class="tabcontent active">
 							<div class="rotate" style="margin-top: 32em;">
 								<h2 class="heading">Portfolio</h2>
 							</div>
@@ -2424,7 +2421,8 @@
 	<script src="js/topbutton.js"></script>
 	<script src="js/aboutus.js"></script>
 	<script src="js/jquery.mixitup.js"></script>
-    
+	<!-- <script src="js/work_close_button.js"></script> -->
+	<!-- <script src="js/responsive_tab.js"></script> -->
 
 
 	</body>

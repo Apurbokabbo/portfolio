@@ -31,3 +31,5 @@ function showNextImage() {
 document.getElementById("yourImageElementId").onclick = function () {
   showImage(this.src);
 };
+
+

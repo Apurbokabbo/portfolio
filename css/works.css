@@ -160,9 +160,14 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.tab-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .tab {
   overflow: hidden;
-  /* border-bottom: 1px solid #ccc; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -180,11 +185,14 @@
 }
 
 .tab button:hover {
-  border-color: var(--secondary-color); /* Use secondary color for border */
-  background-color: var(
-    --secondary-color
-  ); /* Use secondary color for background */
-  color: #fff; /* Change text color to white */
+  border-color: var(--main-color);
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+.tab-dropdown:hover:not(:focus) {
+  background-color: var(--secondary-color);
+  color: #fff;
 }
 
 .tab button.active {
@@ -194,5 +202,69 @@
 }
 
 .tabcontent {
+  display: none;
   padding: 20px 0;
+}
+
+.tabcontent.active {
+  display: block;
+}
+
+.tab-dropdown {
+  display: none;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  padding-right: 30px; /* Add padding to the right for the arrow */
+  appearance: none; /* Ensure styling for the arrow works */
+  background: #ffffff
+    url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 5"><path fill="%23666" d="M0 0l5 5 5-5z"/></svg>')
+    no-repeat right 14px center;
+  background-size: 16px; /* Adjust the arrow size */
+  border: 2px solid var(--main-color);
+  border-radius: 8px;
+  color: var(--main-color); /* Change font color */
+}
+
+.tab-dropdown:focus {
+  background-color: #f1f1f1; /* Active background color */
+  color: var(--main-color); /* Active text color */
+}
+
+.tab-dropdown option {
+  background-color: var(--secondary-color);
+  color: #f0f0f0; /* Change font color of options */
+  font-size: 16px; /* Update font size for options */
+}
+
+.tab-dropdown option:checked {
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+}
+
+@media screen and (max-width: 768px) {
+  .tab {
+    display: none;
+  }
+
+  .tab-dropdown {
+    display: block;
+  }
+}
+
+.tab-dropdown.hover-active {
+  background-color: var(--secondary-color); /* Hover background color */
+  color: #fff; /* Hover text color */
+}
+
+.tablinks.active {
+  background-color: var(--main-color); /* Active tab background */
+  color: #fff; /* Active tab text color */
+}
+
+.tablinks:focus {
+  outline: none; /* Ensure no focus outline */
+  background-color: inherit; /* Match default styles */
+  color: inherit;
 }
