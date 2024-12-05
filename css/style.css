@@ -445,7 +445,7 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
   #colorlib-progress,
   #colorlib-contact,
   #colorlib-about {
-    padding: 5em 0;
+    padding: 2em 0;
   }
 }
 
@@ -528,11 +528,20 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
   height: 1px;
 }
 
+@media screen and (max-width: 768px) {
+  .first-tittle{
+    padding-bottom: 5em !important;
+  
+  }
+
+}
+
 .bold {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
+  /* margin-top: .8em !important;  */
   font-size: 120px;
   margin-top: 16px;
   color: #f0f0f0;
@@ -541,6 +550,7 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
 @media screen and (max-width: 768px) {
   .bold {
     font-size: 60px;
+    
   }
 }
 
@@ -1830,6 +1840,13 @@ input[type="text"] {
 .tittle-bottom-padding {
   padding-bottom: 12em;
 }
+
+@media screen and (max-width: 768px) {
+  .tittle-bottom-padding  {
+    padding-bottom: 8em;
+  }
+}
+
 
 /* styles.css */
 
