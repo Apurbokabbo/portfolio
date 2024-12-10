@@ -227,51 +227,47 @@ a:hover {
    Why choose Me Section
 ::::::::::::::::::::::::::::::::::::*/
 
-.single-why-me {
-  position: relative;
-  padding-right: 115px;
-  text-align: right;
-  margin-bottom: 30px;
+/* General Styles for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .single-why-me {
+    text-align: center; /* Center text and icons */
+    padding: 0; /* Remove side padding */
+    margin-bottom: 24px;
+  }
+
+  .single-why-me .why-me-icon {
+    position: relative; /* Remove absolute positioning */
+    margin: 0 auto 15px; /* Center the icon above the text */
+    width: 70px; /* Adjust icon size for smaller screens */
+    height: 70px;
+    font-size: 30px; /* Scale down font size */
+    line-height: 70px; /* Adjust line height for centering */
+  }
+
+  .single-why-me h4 {
+    font-size: 20px; /* Adjust heading size for smaller screens */
+  }
+
+  .single-why-me p {
+    font-size: 16px; /* Adjust paragraph text size */
+  }
+
+  .why-me-right,
+  .why-me-left {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .tittle-bottom-padding {
+    margin-bottom: 1em; /* Adjust title spacing */
+  }
+
+  .rotate .heading {
+    font-size: 24px; /* Scale down rotated text */
+    margin-top: 4em;
+  }
 }
 
-.d-table-cell {
-  vertical-align: middle;
-  padding-top: 0.8em;
-}
-
-.single-why-me:hover .why-me-icon {
-  background-color: #007780;
-  color: #ffffff;
-}
-
-.why-me-right .why-me-icon,
-.why-me-left .why-me-icon {
-  color: #fff;
-  position: absolute;
-  font-size: 40px;
-  width: 100px;
-  height: 100%;
-  /* border: 1px solid #007780; */
-  text-align: center;
-  line-height: 1;
-  right: 0;
-  bottom: 0;
-  display: inline-block;
-  background-color: #3babbd;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.single-why-me.why-me-right {
-  text-align: left;
-  padding-right: 0;
-  padding-left: 115px;
-}
-
-.why-me-right .why-me-icon {
-  right: auto;
-  left: 0;
-}
 
 /*::::::::::::::::::::::::::::::::::::
    Sidebar

@@ -1,59 +1,81 @@
 // Initialize EmailJS and set up form submission handling
-function initializeEmailJS(e) {
+function initializeEmailJS() {
+  // Initialize EmailJS with your public key
   emailjs.init("OPgp3Fon1tDaszFAx");
 
-  // Form submission handler
-  document
-    .getElementById("contactForm")
-    .addEventListener("submit", function (e) {
-      e.preventDefault();
+  const form = document.getElementById("contactForm");
+  const inputs = form.querySelectorAll(".form-control");
+  const statusMessage = document.getElementById("status-message");
+  const errorMessage = document.getElementById("error-message");
 
-      // Get form fields
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const message = document.getElementById("message").value.trim();
-      const statusMessage = document.getElementById("status-message");
-      const errorMessage = document.getElementById("error-message");
+  // Input focus and blur effects
+  inputs.forEach((input) => {
+    input.addEventListener("focus", () => {
+      input.style.borderColor = "#007780"; // Highlight on focus
+    });
+    input.addEventListener("blur", () => {
+      input.style.borderColor = ""; // Reset border color on blur
+      
+    });
+  });
 
-      // Reset messages
+  // Remove messages after 5 seconds
+  const removeMessageAfterDelay = () => {
+    setTimeout(() => {
       statusMessage.textContent = "";
       errorMessage.textContent = "";
+    }, 5000);
+  };
 
-      if (!name || !email || !message) {
-        errorMessage.textContent = "All fields are required.";
-        return;
-      }
-      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailPattern.test(email)) {
-        errorMessage.textContent = "Invalid email format.";
-        return;
-      }
+  // Form submission handler
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent default form submission
 
-      const templateParams = {
-        to_name: "Apurbo Kabbo", // Static value or use form data if needed
-        from_name: document.getElementById("name").value,
-        message: document.getElementById("message").value,
-        reply_to: document.getElementById("email").value,
-      };
+    // Get form values
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
 
-      // emailjs.send("service_4eaeg8k", "template_i19ur1d", {
-      //   to_name: "kabbo",
-      //   from_name: "apurbo",
-      //   message: "hello body",
-      //   reply_to: "test@gmail.com",
-      // });
+    // Reset messages
+    statusMessage.textContent = "";
+    errorMessage.textContent = "";
 
-      emailjs.send("service_4eaeg8k", "template_i19ur1d", templateParams).then(
-        function (response) {
-          document.getElementById("status-message").textContent =
-            "Message sent successfully!";
-          document.getElementById("contactForm").reset(); // Clear form fields
+    // Validation
+    if (!name || !email || !message) {
+      errorMessage.textContent = "All fields are required.";
+      removeMessageAfterDelay();
+      return;
+    }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      errorMessage.textContent = "Invalid email format.";
+      removeMessageAfterDelay();
+      return;
+    }
+
+    // Prepare email data
+    const templateParams = {
+      to_name: "Apurbo Kabbo",
+      from_name: name,
+      message: message,
+      reply_to: email,
+    };
+
+    // Send email using EmailJS
+    emailjs
+      .send("service_4eaeg8k", "template_i19ur1d", templateParams)
+      .then(
+        function () {
+          statusMessage.textContent = "Message sent successfully!";
+          form.reset(); // Clear form fields
+          removeMessageAfterDelay();
         },
         function (error) {
-          document.getElementById("error-message").textContent =
-            "Failed to send message. Please try again.";
+          errorMessage.textContent = "Failed to send message. Please try again.";
           console.error("Error:", error);
+          removeMessageAfterDelay();
         }
       );
-    });
+  });
 }

@@ -147,6 +147,16 @@ h5 {
   }
 }
 
+
+
+/* Focus effect for input fields */
+.form-control:focus {
+  border: 2px solid var(--secondary-color); /* Change to your primary color */
+  outline: none;
+  background-color: #f9f9f9; /* Optional: subtle background change */
+}
+
+
 #colorlib-main-nav {
   position: absolute;
   top: 0;
@@ -1585,12 +1595,12 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
   -ms-border-radius: 0px;
   border-radius: 0px;
 }
-.form-control:focus,
+/* .form-control:focus,
 .form-control:active {
   -webkit-box-shadow: none;
   box-shadow: none;
   border: transparent;
-}
+} */
 
 input[type="text"] {
   height: 50px;
@@ -1599,6 +1609,10 @@ input[type="text"] {
 .form-group {
   margin-bottom: 30px;
 }
+
+
+
+
 
 .colorlib-social-icons a:hover,
 .colorlib-social-icons a:focus {
@@ -1616,6 +1630,17 @@ input[type="text"] {
   width: 100%;
   padding-top: 6em;
 }
+
+@media screen and (max-width: 768px) {
+  #footer {
+    padding-top: 2px;
+  }
+}
+
+
+
+
+
 #footer h2 {
   color: #000;
   letter-spacing: 1px;
@@ -1705,6 +1730,13 @@ input[type="text"] {
   z-index: 1;
 }
 
+@media (max-width: 768px) {
+  .social_hover ul {
+   margin-left: 8px; /* Add left padding */
+  }
+}
+
+
 .social_hover li a .icon {
   position: relative;
   color: #262626;
@@ -1745,19 +1777,19 @@ input[type="text"] {
   background: #0077b5;
 }
 
-.social_hover li:nth-child(4) a:before {
+/* .social_hover li:nth-child(4) a:before {
   background: #55acee;
-}
+} */
 
-.social_hover li:nth-child(5) a:before {
+.social_hover li:nth-child(4) a:before {
   background: #e71046;
 }
 
-.social_hover li:nth-child(6) a:before {
+.social_hover li:nth-child(5) a:before {
   background: #13dd24;
 }
 
-.social_hover li:nth-child(7) a:before {
+.social_hover li:nth-child(6) a:before {
   background: #eb0404;
 }
 .social_hover li:nth-child(8) a:before {
