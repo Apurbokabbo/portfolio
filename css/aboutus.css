@@ -160,7 +160,9 @@ body {
   margin: 100px 0;
 }
 
-@media only screen and (max-width: 62.5em) {
+
+
+@media only screen and (max-width: 768px) {
   .container .card {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

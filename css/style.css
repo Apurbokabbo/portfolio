@@ -546,10 +546,12 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
   margin-top: 16px;
   color: #f0f0f0;
   font-weight: 700;
+  z-index: -1;
 }
 @media screen and (max-width: 768px) {
   .bold {
     font-size: 60px;
+    margin-bottom: 4rem;
     
   }
 }
