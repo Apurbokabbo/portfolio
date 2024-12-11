@@ -150,7 +150,6 @@ a:hover {
   background-color: #d3391d;
 }
 
-
 /*::::::::::::::::::::::::::::::::::::
    Service Section
 ::::::::::::::::::::::::::::::::::::*/
@@ -228,51 +227,60 @@ a:hover {
 ::::::::::::::::::::::::::::::::::::*/
 
 /* General Styles for Mobile Responsiveness */
-@media (max-width: 768px) {
-  .single-why-me {
-    text-align: center; /* Center text and icons */
-    padding: 0; /* Remove side padding */
-    margin-bottom: 24px;
-  }
 
-  .single-why-me .why-me-icon {
-    position: relative; /* Remove absolute positioning */
-    margin: 0 auto 15px; /* Center the icon above the text */
-    width: 70px; /* Adjust icon size for smaller screens */
-    height: 70px;
-    font-size: 30px; /* Scale down font size */
-    line-height: 70px; /* Adjust line height for centering */
-  }
-
-  .single-why-me h4 {
-    font-size: 20px; /* Adjust heading size for smaller screens */
-  }
-
-  .single-why-me p {
-    font-size: 16px; /* Adjust paragraph text size */
-  }
-
-  .why-me-right,
-  .why-me-left {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .tittle-bottom-padding {
-    margin-bottom: 1em; /* Adjust title spacing */
-  }
-
-  .rotate .heading {
-    font-size: 24px; /* Scale down rotated text */
-    margin-top: 4em;
-  }
+.single-why-me .why-me-icon {
+  position: relative; /* Remove absolute positioning */
+  margin: 0 auto 15px; /* Center the icon above the text */
+  width: 70px; /* Adjust icon size for smaller screens */
+  height: 70px;
+  font-size: 30px; /* Scale down font size */
+  line-height: 70px; /* Adjust line height for centering */
 }
 
+.single-why-me h4 {
+  font-size: 20px; /* Adjust heading size for smaller screens */
+}
+
+.single-why-me p {
+  font-size: 16px; /* Adjust paragraph text size */
+}
+
+.why-me-container {
+  display: flex;
+}
+
+.why-me-card {
+  flex-basis: 50%;
+}
+.why-me-right,
+.why-me-left {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.tittle-bottom-padding {
+  margin-bottom: 1em; /* Adjust title spacing */
+}
+
+.rotate .heading {
+  font-size: 24px; /* Scale down rotated text */
+  margin-top: 4em;
+}
+
+@media (max-width: 768px) {
+  .single-why-me {
+    text-align: center;
+    padding: 0;
+    margin-bottom: 24px;
+  }
+  .why-me-container {
+    display: block;
+  }
+}
 
 /*::::::::::::::::::::::::::::::::::::
    Sidebar
 ::::::::::::::::::::::::::::::::::::*/
-
 
 /*Comments CSS*/
 
