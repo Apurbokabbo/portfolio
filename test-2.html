@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Blog Post</title>
+    <link rel="stylesheet" href="css/test.css">
+</head>
+<body class="blog-detail-page">
+    <div class="header">
+        <div class="header-content">
+            <button class="back-btn" onclick="location.href='test.html'">← Back to Blog</button>
+        </div>
+    </div>
+
+    <div id="blogContent">
+        <!-- Content will be dynamically loaded here -->
+    </div>
+
+    <script>
+        // Get URL parameter
+        function getUrlParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Get blog data from sessionStorage
+        const blogData = JSON.parse(sessionStorage.getItem('blogData') || '{}');
+        const postSlug = getUrlParameter('post');
+        const currentBlog = blogData[postSlug];
+
+        // Store comments for each blog
+        const commentsKey = `comments_${postSlug}`;
+        let comments = JSON.parse(sessionStorage.getItem(commentsKey) || '[]');
+
+        if (currentBlog) {
+            // Update page title
+            document.getElementById('pageTitle').textContent = currentBlog.title;
+
+            // Render blog content
+            document.getElementById('blogContent').innerHTML = `
+                <div class="blog-header">
+                    <div class="blog-image-container">
+                        ${currentBlog.imageType === 'img' 
+                            ? `<img src="${currentBlog.image}" alt="${currentBlog.title}">` 
+                            : currentBlog.image
+                        }
+                    </div>
+                    <div class="blog-date">${currentBlog.date}</div>
+                    <h1 class="blog-title">${currentBlog.title}</h1>
+                </div>
+
+                <div class="blog-content">
+                    ${currentBlog.content}
+                </div>
+
+                <div class="comments-section">
+                    <h3>Comments (<span id="commentCount">0</span>)</h3>
+                    
+                    <div class="comment-form">
+                        <div class="form-group">
+                            <label for="commentName">Name</label>
+                            <input type="text" id="commentName" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="commentEmail">Email</label>
+                            <input type="email" id="commentEmail" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="commentText">Comment</label>
+                            <textarea id="commentText" placeholder="Write your comment here..." required></textarea>
+                        </div>
+                        <button class="submit-btn" onclick="submitComment()">Post Comment</button>
+                    </div>
+                    
+                    <div class="comments-list" id="commentsList"></div>
+                </div>
+            `;
+
+            // Render existing comments
+            renderComments();
+        } else {
+            // Blog not found
+            document.getElementById('blogContent').innerHTML = `
+                <div class="error-message">
+                    <h2>Blog Post Not Found</h2>
+                    <p>The blog post you're looking for doesn't exist.</p>
+                    <button class="back-btn" onclick="location.href='test.html'" style="margin-top: 20px;">← Back to Blog</button>
+                </div>
+            `;
+        }
+
+        function renderComments() {
+            const commentsList = document.getElementById('commentsList');
+            const commentCount = document.getElementById('commentCount');
+            
+            if (!commentsList) return;
+            
+            commentCount.textContent = comments.length;
+            
+            if (comments.length === 0) {
+                commentsList.innerHTML = '<p class="no-comments">No comments yet. Be the first to comment!</p>';
+                return;
+            }
+            
+            commentsList.innerHTML = comments.map(comment => `
+                <div class="comment">
+                    <div class="comment-header">
+                        <div class="comment-avatar">${comment.name.charAt(0).toUpperCase()}</div>
+                        <div class="comment-info">
+                            <div class="comment-author">${comment.name}</div>
+                            <div class="comment-date">${comment.date}</div>
+                        </div>
+                    </div>
+                    <p class="comment-text">${escapeHtml(comment.text)}</p>
+                </div>
+            `).reverse().join('');
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function submitComment() {
+            const name = document.getElementById('commentName').value.trim();
+            const email = document.getElementById('commentEmail').value.trim();
+            const text = document.getElementById('commentText').value.trim();
+            
+            if (!name || !email || !text) {
+                alert('Please fill in all fields');
+                return;
+            }
+            
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert('Please enter a valid email address');
+                return;
+            }
+            
+            const comment = {
+                name: name,
+                email: email,
+                text: text,
+                date: new Date().toLocaleString('en-US', { 
+                    month: 'short', 
+                    day: 'numeric', 
+                    year: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                })
+            };
+            
+            comments.push(comment);
+            sessionStorage.setItem(commentsKey, JSON.stringify(comments));
+            
+            renderComments();
+            
+            // Clear form
+            document.getElementById('commentName').value = '';
+            document.getElementById('commentEmail').value = '';
+            document.getElementById('commentText').value = '';
+            
+            // Scroll to comments
+            document.getElementById('commentsList').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+    </script>
+</body>
+</html>

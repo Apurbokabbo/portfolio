@@ -4,111 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SQA Engineer Blog</title>
-
     <link rel="stylesheet" href="css/test.css">
-  
 </head>
 <body>
     <div class="blog-portfolio-wrapper">
         <div class="container">
-        
-        
-        <div class="blog-grid">
-            <!-- Blog Card 1 -->
-            <div class="blog-card">
-                <div class="blog-image">
-                  <img src="images\blogs\qa_skills.png" alt="Blog Image">
-                </div>
-                <div class="blog-content">
-                    <div class="blog-date">Nov 28, 2025</div>
-                    <h2 class="blog-title">5 Essential Skills Every QA Engineer Needs in 2025</h2>
-                    <button class="read-more-btn" onclick="openModal(1)">Read More</button>
-                </div>
-            </div>
-
-            <!-- Blog Card 2 -->
-            <div class="blog-card">
-                <div class="blog-image">🔍</div>
-                <div class="blog-content">
-                    <div class="blog-date">Nov 25, 2024</div>
-                    <h2 class="blog-title">Understanding API Testing Fundamentals</h2>
-                    <button class="read-more-btn" onclick="openModal(2)">Read More</button>
-                </div>
-            </div>
-
-            <!-- Blog Card 3 -->
-            <div class="blog-card">
-                <div class="blog-image">⚡</div>
-                <div class="blog-content">
-                    <div class="blog-date">Nov 22, 2024</div>
-                    <h2 class="blog-title">Performance Testing Strategies</h2>
-                    <button class="read-more-btn" onclick="openModal(3)">Read More</button>
-                </div>
-            </div>
-
-            <!-- Blog Card 4 -->
-            <div class="blog-card">
-                <div class="blog-image">🐛</div>
-                <div class="blog-content">
-                    <div class="blog-date">Nov 18, 2024</div>
-                    <h2 class="blog-title">Effective Bug Reporting Techniques</h2>
-                    <button class="read-more-btn" onclick="openModal(4)">Read More</button>
-                </div>
-            </div>
-
-            <!-- Blog Card 5 -->
-            <div class="blog-card">
-                <div class="blog-image">🚀</div>
-                <div class="blog-content">
-                    <div class="blog-date">Nov 15, 2024</div>
-                    <h2 class="blog-title">CI/CD Integration for QA Teams</h2>
-                    <button class="read-more-btn" onclick="openModal(5)">Read More</button>
-                </div>
-            </div>
-
-            <!-- Blog Card 6 -->
-            <div class="blog-card">
-                <div class="blog-image">📊</div>
-                <div class="blog-content">
-                    <div class="blog-date">Nov 12, 2024</div>
-                    <h2 class="blog-title">Quality Metrics That Matter</h2>
-                    <button class="read-more-btn" onclick="openModal(6)">Read More</button>
-                </div>
-            </div>
-        </div>
-        </div>
-    </div>
-
-    <!-- Modal -->
-    <div id="blogModal" class="blog-portfolio-modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="close" onclick="closeModal()">&times;</span>
-                <div class="modal-image" id="modalImage"></div>
-                <div class="modal-title-section">
-                    <div class="modal-date" id="modalDate"></div>
-                    <h2 id="modalTitle"></h2>
-                </div>
-            </div>
-            <div class="modal-body" id="modalBody"></div>
+            <h1>QA Engineer Blog</h1>
+            
+            <div class="blog-grid" id="blogGrid"></div>
         </div>
     </div>
 
     <script>
-        // Store comments in memory (separate for each blog)
-        const commentsData = {
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-            5: [],
-            6: []
-        };
-
         const blogData = {
-            1: {
+            '5-essential-skills-every-qa-engineer-needs-in-2025': {
+                id: '5-essential-skills-every-qa-engineer-needs-in-2025',
                 title: "5 Essential Skills Every QA Engineer Needs in 2025",
-                image: "../images/blogs/qa_skills.png",
+                image: "images/blogs/qa_skills.png",
+                imageType: "img",
                 date: "Nov 28, 2025",
                 content: `
                     <p>The QA landscape is evolving faster than ever. With AI-driven development, complex microservices, and rapid release cycles becoming the norm, QA Engineers must upgrade their skillset to stay ahead.</p>
@@ -131,9 +44,11 @@
                     <p>By following these best practices, your automation efforts will deliver maximum value while minimizing maintenance overhead and technical debt.</p>
                 `
             },
-            2: {
+            'understanding-api-testing-fundamentals': {
+                id: 'understanding-api-testing-fundamentals',
                 title: "Understanding API Testing Fundamentals",
                 image: "🔍",
+                imageType: "emoji",
                 date: "Nov 25, 2024",
                 content: `
                     <p>API testing is essential for ensuring the reliability and functionality of modern applications. As systems become more interconnected, robust API testing becomes critical for quality assurance.</p>
@@ -154,9 +69,11 @@
                     <p>Organize tests logically, use environment variables for flexibility, implement proper assertions, test both positive and negative scenarios, and maintain comprehensive documentation. Regular test maintenance ensures long-term reliability.</p>
                 `
             },
-            3: {
+            'performance-testing-strategies': {
+                id: 'performance-testing-strategies',
                 title: "Performance Testing Strategies",
                 image: "⚡",
+                imageType: "emoji",
                 date: "Nov 22, 2024",
                 content: `
                     <p>Performance testing ensures your application can handle expected load and provides a good user experience under various conditions. A well-planned performance testing strategy is essential for production readiness.</p>
@@ -177,9 +94,11 @@
                     <p>Analyze results to identify bottlenecks. Look for resource saturation, database query issues, network latency, and inefficient algorithms. Use findings to optimize code, infrastructure, and configurations. Retest to validate improvements.</p>
                 `
             },
-            4: {
+            'effective-bug-reporting-techniques': {
+                id: 'effective-bug-reporting-techniques',
                 title: "Effective Bug Reporting Techniques",
                 image: "🐛",
+                imageType: "emoji",
                 date: "Nov 18, 2024",
                 content: `
                     <p>Quality bug reports are essential for efficient software development. A well-written bug report saves time, reduces confusion, and accelerates the resolution process.</p>
@@ -203,9 +122,11 @@
                     <p>Respond promptly to developer questions. Test fixes when asked. Update the bug status appropriately. Close resolved bugs after verification. Good communication builds trust and improves team efficiency.</p>
                 `
             },
-            5: {
+            'cicd-integration-for-qa-teams': {
+                id: 'cicd-integration-for-qa-teams',
                 title: "CI/CD Integration for QA Teams",
                 image: "🚀",
+                imageType: "emoji",
                 date: "Nov 15, 2024",
                 content: `
                     <p>Continuous Integration and Continuous Deployment (CI/CD) transforms how QA teams work. Integrating testing into CI/CD pipelines enables faster feedback, better quality, and more frequent releases.</p>
@@ -229,9 +150,11 @@
                     <p>Track pipeline execution times, test success rates, and failure patterns. Continuously optimize slow tests. Remove or fix flaky tests. Regular reviews ensure the pipeline remains efficient and valuable.</p>
                 `
             },
-            6: {
+            'quality-metrics-that-matter': {
+                id: 'quality-metrics-that-matter',
                 title: "Quality Metrics That Matter",
                 image: "📊",
+                imageType: "emoji",
                 date: "Nov 12, 2024",
                 content: `
                     <p>Measuring quality effectively requires the right metrics. While no single metric tells the complete story, combining several provides valuable insights into product quality and testing effectiveness.</p>
@@ -260,137 +183,36 @@
             }
         };
 
-        function openModal(id) {
-            const modal = document.getElementById('blogModal');
-            const modalTitle = document.getElementById('modalTitle');
-            const modalBody = document.getElementById('modalBody');
-            const modalImage = document.getElementById('modalImage');
+        function renderBlogs() {
+            const grid = document.getElementById('blogGrid');
+            const blogs = Object.values(blogData);
             
-            modalTitle.textContent = blogData[id].title;
-            modalImage.textContent = blogData[id].image;
-            
-            // Build the modal content with article and comments section
-            modalBody.innerHTML = blogData[id].content + `
-                <div class="comments-section">
-                    <h3>Comments (${commentsData[id].length})</h3>
-                    
-                    <div class="comment-form">
-                        <div class="form-group">
-                            <label for="commentName">Name</label>
-                            <input type="text" id="commentName" placeholder="Enter your name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="commentEmail">Email</label>
-                            <input type="email" id="commentEmail" placeholder="Enter your email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="commentText">Comment</label>
-                            <textarea id="commentText" placeholder="Write your comment here..." required></textarea>
-                        </div>
-                        <button class="submit-btn" onclick="submitComment(${id})">Post Comment</button>
+            grid.innerHTML = blogs.map(blog => `
+                <div class="blog-card">
+                    <div class="blog-image">
+                        ${blog.imageType === 'img' 
+                            ? `<img src="${blog.image}" alt="${blog.title}">` 
+                            : blog.image
+                        }
                     </div>
-                    
-                    <div class="comments-list" id="commentsList-${id}">
-                        ${renderComments(id)}
+                    <div class="blog-content">
+                        <div class="blog-date">${blog.date}</div>
+                        <h2 class="blog-title">${blog.title}</h2>
+                        <button class="read-more-btn" onclick="openBlog('${blog.id}')">Read More</button>
                     </div>
                 </div>
-            `;
-            
-            modal.style.display = 'block';
-            document.body.style.overflow = 'hidden';
+            `).join('');
         }
 
-        function renderComments(blogId) {
-            if (commentsData[blogId].length === 0) {
-                return '<p class="no-comments">No comments yet. Be the first to comment!</p>';
-            }
-            
-            return commentsData[blogId].map(comment => `
-                <div class="comment">
-                    <div class="comment-header">
-                        <div class="comment-avatar">${comment.name.charAt(0).toUpperCase()}</div>
-                        <div class="comment-info">
-                            <div class="comment-author">${comment.name}</div>
-                            <div class="comment-date">${comment.date}</div>
-                        </div>
-                    </div>
-                    <p class="comment-text">${comment.text}</p>
-                </div>
-            `).reverse().join('');
+        function openBlog(slug) {
+            window.location.href = `test-2.html?post=${slug}`;
         }
 
-        function submitComment(blogId) {
-            const name = document.getElementById('commentName').value.trim();
-            const email = document.getElementById('commentEmail').value.trim();
-            const text = document.getElementById('commentText').value.trim();
-            
-            if (!name || !email || !text) {
-                alert('Please fill in all fields');
-                return;
-            }
-            
-            // Basic email validation
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailPattern.test(email)) {
-                alert('Please enter a valid email address');
-                return;
-            }
-            
-            // Create comment object
-            const comment = {
-                name: name,
-                email: email,
-                text: text,
-                date: new Date().toLocaleString('en-US', { 
-                    month: 'short', 
-                    day: 'numeric', 
-                    year: 'numeric',
-                    hour: '2-digit',
-                    minute: '2-digit'
-                })
-            };
-            
-            // Add comment to data
-            commentsData[blogId].push(comment);
-            
-            // Update comments display - show all comments immediately
-            document.getElementById(`commentsList-${blogId}`).innerHTML = renderComments(blogId);
-            
-            // Update comment count
-            document.querySelector('.comments-section h3').textContent = `Comments (${commentsData[blogId].length})`;
-            
-            // Clear form
-            document.getElementById('commentName').value = '';
-            document.getElementById('commentEmail').value = '';
-            document.getElementById('commentText').value = '';
-            
-            // Scroll to the comments list to show the new comment
-            document.getElementById(`commentsList-${blogId}`).scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }
+        // Store blog data in sessionStorage for the detail page to access
+        sessionStorage.setItem('blogData', JSON.stringify(blogData));
 
-        function closeModal() {
-            const modal = document.getElementById('blogModal');
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-
-        // Close modal when clicking outside
-        window.onclick = function(event) {
-            const modal = document.getElementById('blogModal');
-            if (event.target == modal) {
-                closeModal();
-            }
-        }
-
-        // Close modal with Escape key
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                const modal = document.getElementById('blogModal');
-                if (modal.style.display === 'block') {
-                    closeModal();
-                }
-            }
-        });
+        // Render blogs on page load
+        renderBlogs();
     </script>
 </body>
 </html>
