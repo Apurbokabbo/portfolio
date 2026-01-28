@@ -485,16 +485,16 @@
 .blog-detail-page .blog-header {
     max-width: 900px;
     margin: 40px auto;
-    padding: 0 20px;
+    padding: 0 0px;
 }
 
 .blog-detail-page .blog-image-container {
     width: 100%;
-    height: 400px;
+    height: 500px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     border-radius: 15px;
     overflow: hidden;
-    margin-bottom: 30px;
+    margin: 30px 0px 30px 0px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -503,9 +503,8 @@
 
 .blog-detail-page .blog-image-container img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+    background-size: cover;
+    background-position: center;
 }
 
 .blog-detail-page .blog-date {
