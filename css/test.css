@@ -6,7 +6,7 @@
 }
 
 .blog-portfolio-wrapper {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Karla", Arial, sans-serif;
     /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
     min-height: 100vh;
     padding: 40px 20px;
@@ -133,7 +133,7 @@
     background: linear-gradient(135deg, #034f55 0%, #007780 100%);
     color: white;
     border: none;
-    padding: 10px 25px;
+    padding: 8px 20px 8px 8px;
     border-radius: 25px;
     cursor: pointer;
     font-size: 0.95rem;
@@ -452,7 +452,7 @@
 
 /* Header */
 .blog-detail-page .header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #034f55;
     padding: 20px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
@@ -467,7 +467,7 @@
 
 .blog-detail-page .back-btn {
     background: white;
-    color: #667eea;
+    color: 007780;
     border: none;
     padding: 10px 25px;
     border-radius: 25px;
