@@ -6,7 +6,7 @@
 }
 
 .blog-portfolio-wrapper {
-    font-family: "Karla", Arial, sans-serif;
+    font-family: "Karla", Arial, sans-serif !important;
     /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
     padding: 40px 20px;
 }
@@ -22,6 +22,7 @@
     margin-bottom: 50px;
     font-size: 2.5rem;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    
 }
 
 .blog-portfolio-wrapper .blog-grid {
@@ -77,6 +78,7 @@
     height: 40%; /* 40% for content */
     flex-shrink: 0; /* Prevent shrinking */
     overflow: hidden; /* Prevent content overflow */
+    font-family: "Karla", Arial, sans-serif !important;
 }
 
 .blog-portfolio-wrapper .blog-content-inner {
@@ -113,13 +115,14 @@
 }
 
 .blog-portfolio-wrapper .blog-title {
-    font-size: 1.3rem;
+    font-size: 1.9rem;
     color: #333;
     margin-bottom: 10px;
     line-height: 1.4;
     overflow-wrap: break-word;
     word-wrap: break-word;
     /* Multiline support - removed line clamp */
+    font-family: "Karla", Arial, sans-serif !important;
 }
 
 .blog-portfolio-wrapper .blog-button-wrapper {
@@ -135,7 +138,7 @@
     padding: 8px 20px 8px 8px;
     border-radius: 25px;
     cursor: pointer;
-    font-size: 0.95rem;
+    font-size: 1.4rem;
     font-weight: 600;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
@@ -506,14 +509,16 @@
     background-position: center;
 }
 
-.blog-detail-page .blog-date {
+.blog-portfolio-wrapper .blog-date {
     color: #667eea;
     font-size: 0.9em;
     font-weight: 600;
     margin-bottom: 10px;
     display: flex;
     align-items: center;
+
 }
+
 
 .blog-detail-page .blog-date::before {
     content: "📅";
