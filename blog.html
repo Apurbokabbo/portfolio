@@ -132,9 +132,120 @@
 						</div>
 					</div>
 				</div>
-				aaa
+				
 			</div>
 		</div>
+
+		<div class="blog-portfolio-wrapper">
+        <div class="container"> 
+            <div class="blog-grid" id="blogGrid"></div>
+        </div>
+    </div>
+
+    <script>
+        const blogData = {
+            '5-essential-skills-every-qa-engineer-needs-in-2025': {
+                id: '5-essential-skills-every-qa-engineer-needs-in-2025',
+                title: "5 Essential Skills Every QA Engineer Needs in 2025",
+                image: "images/blogs/qa_skills.png",
+                imageType: "img",
+                date: "Nov 28, 2025",
+                content: `
+                    <p>The QA landscape is evolving faster than ever. With AI-driven development, complex microservices, and rapid release cycles becoming the norm, QA Engineers must upgrade their skillset to stay ahead.</p>
+                    <p>Here are the 5 must-have skills for QA Engineers in 2025:<p>
+                    <h3>1. Test Automation Mastery</h3>
+                    <p> Manual testing isn't enough anymore. Tools like Playwright, Cypress, and Appium are becoming essential. Knowing how to design stable, scalable automation frameworks is a game-changer.</p>
+                    
+                    <h3>2. API Testing & Validation</h3>
+                    <p>Modern systems rely heavily on APIs. Mastering tools like Postman, RestAssured, and JMeter — plus understanding the API lifecycle, authentication (OAuth, JWT), and contract testing — is crucial.</p>
+                    
+                    <h3>3. Understanding CI/CD Pipelines</h3>
+                    <p>Quality now lives inside the pipeline. Knowing Jenkins, GitHub Actions, GitLab CI, or Azure DevOps helps you test early, deploy faster, and prevent production issues.</p>
+                    
+                    <h3> 4. AI-Assisted Testing</h3>
+                    <p>AI is no longer optional. From AI-based test case generation to intelligent defect prediction, QA engineers must learn to leverage AI tools to increase coverage and speed.</p>
+                    
+                    <h3>5. Strong Analytical & Communication Skills</h3>
+                    <p> Beyond tools, QA is about thinking critically, identifying edge cases, and communicating risks clearly with developers, PMs, and stakeholders.</p>
+                    
+                    <p>The reality?</p>
+                    <p>The QA role is shifting from "finding bugs" to "preventing bugs" and ensuring quality across the entire SDLC.</p>
+                    <p>Those who adapt will lead the next generation of quality engineering.</p>
+                `
+            },
+            'is_ai_going_to_replace_qa_engineers?': {
+                id: 'is_ai_going_to_replace_qa_engineers?',
+                title: "Is AI Going to Replace QA Engineers?",
+                image: "images/blogs/ai_gogin_replace.png",
+                imageType: "img",
+                date: "Dec 16, 2025",
+                content: `
+                    <p>Short answer: No. But it WILL replace QA engineers who don't adapt.</p>
+                    <p>With the rise of LLMs, automated test generators, and smart debugging tools, it's easy to assume QA jobs are disappearing.</p>
+                    <p>Here's why AI won't replace us entirely:</p>
+
+                    <h3>1. AI Lacks Context & Intuition</h3>
+                    <p>AI can generate test cases based on requirements, but it doesn't understand user behavior, business context, or the "why" behind features. It can't anticipate how a frustrated user might break your app in creative ways.</p>
+
+                    <h3>2. Exploratory Testing Needs Human Curiosity</h3>
+                    <p>The best bugs I've found weren't from scripted tests—they came from curiosity, asking "what if?", and understanding the user journey. AI follows patterns; humans find the unexpected.</p>
+
+                    <h3>3. Critical Thinking Can't Be Automated</h3>
+                    <p>Deciding what to test, what risks matter most, and how to balance speed vs. coverage requires judgment that comes from experience, not algorithms.</p>
+
+                    <h3>4. Stakeholder Communication is Human Work</h3>
+                    <p>Explaining quality risks to PMs, negotiating timelines, and building trust with dev teams—these are fundamentally human skills.</p>
+
+                    <h3>BUT—AI Will Transform Our Role:</h3>
+                    <p>✅ Handle repetitive tasks (visual regression, basic test generation)</p>
+                    <p>✅ Augment our capabilities (faster defect analysis, pattern detection)</p>
+                    <p>✅ Improve test coverage and risk analysis</p>
+                    <p>✅ Free us to focus on strategic, high-value testing</p>
+
+                    <h3>The Real Question:</h3>
+                    <p>Isn't: "Will AI replace QA engineers?"</p>
+                    <p>It's: "Are you learning to work WITH AI, or are you waiting to be replaced BY it?"</p>
+
+                    <h3>Bottom line:</h3>
+                    <p>AI won't replace QA engineers. But QA engineers who embrace AI will replace those who don't.</p>
+                    <p>The future belongs to those who leverage AI as a powerful tool while bringing uniquely human skills—creativity, empathy, strategic thinking, and adaptability.</p>
+                `
+            }
+            
+        };
+
+        function renderBlogs() {
+            const grid = document.getElementById('blogGrid');
+            const blogs = Object.values(blogData);
+            
+            grid.innerHTML = blogs.map(blog => `
+                <div class="blog-card">
+                    <div class="blog-image">
+                        ${blog.imageType === 'img' 
+                            ? `<img src="${blog.image}" alt="${blog.title}">` 
+                            : blog.image
+                        }
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">${blog.date}</div>
+                        <h2 class="blog-title">${blog.title}</h2>
+                        <button class="read-more-btn" onclick="openBlog('${blog.id}')">Read More</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function openBlog(slug) {
+            window.location.href = `test-2.html?post=${slug}`;
+        }
+
+        // Store blog data in sessionStorage for the detail page to access
+        sessionStorage.setItem('blogData', JSON.stringify(blogData));
+
+        // Render blogs on page load
+        renderBlogs();
+    </script>
+		
 
 
 		<footer>
@@ -226,6 +337,7 @@
 
 	<!-- Main JS (Do not remove) -->
 	<script src="js/main.js"></script>
+	
 
 	</body>
 </html>
